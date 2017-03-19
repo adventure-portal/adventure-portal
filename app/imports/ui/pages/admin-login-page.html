@@ -1,21 +1,21 @@
-<template name="Login_Page">
-  <div class="user-login-page">
-    {{#If_Logged_In}}
+<template name="Admin_Login_Page">
+  <div class="admin-login-page">
+    {{#If_Admin_Logged_In}}
 
-    {{/If_Logged_In}}
+    {{/If_Admin_Logged_In}}
     <div class="ui grid container background">
       <div class="ui container user login page">
         <div class="ui inverted fluid left icon input">
-          <input type="text" placeholder="Username">
+          <input type="text" placeholder="Admin Username">
           <i class="user icon"></i>
         </div>
         <br/>
         <div class="ui inverted fluid left icon input">
-          <input type="text" placeholder="Password">
+          <input type="text" placeholder="Admin Password">
           <i class="lock icon"></i>
         </div>
         <br/>
-        <button class="ui login page button">
+        <button class="ui admin login page button">
           Log in
         </button>
       </div>

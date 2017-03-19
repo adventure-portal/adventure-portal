@@ -23,3 +23,6 @@ import './adventures-page.html';
 
 import './my-profile.js';
 import './my-profile.html';
+
+import './admin-login-page.html';
+import './admin-login-page.js';
