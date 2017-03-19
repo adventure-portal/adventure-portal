@@ -1,3 +1,42 @@
 body {
   padding-top: 61px;  /* Move body of page below navbar. */
 }
+
+/* Top navigation bar */
+.ui.top.fixed.borderless.inverted.menu.navbar {
+  background-color:#2c3e50;
+
+}
+.ui.top.fixed.borderless.inverted.menu.navbar .ui.container .item{
+  background-color:#2c3e50;
+  color:#fff;
+}
+
+.ui.top.fixed.borderless.inverted.menu.navbar .ui.container .item:hover{
+  background-color:#2c3e50;
+  color:#18bc9c;
+}
+
+.home-page-main-background {
+
+  background: url('http://www.wallpaperbetter.com/wallpaper/491/156/919/diamond-head-at-sunset-hawaii-usa-beautiful-city-sea-coast-1080P-wallpaper.jpg') no-repeat center center fixed;
+  background-size:cover;
+  height:750px;
+
+}
+
+.home-page-main-background .ui.main.header {
+  font-size: 55px;
+  margin-top: 275px;
+  color:#fff;
+}
+.home-page-main-background .ui.secondary.header {
+  font-size: 25px;
+
+  color:#fff;
+}
+.page-footer {
+  color:#fff;
+  background-color:#252525;
+  padding-bottom:15px;
+}
