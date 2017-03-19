@@ -18,6 +18,14 @@ body {
   background-color:#2c3e50;
   color:#18bc9c;
 }
+.ui.inverted.menu .active.item {
+  background-color:#2c3e50;
+  color:#18bc9c !important;
+}
+
+.ui.inverted.menu .active.item:hover {
+  color:#18bc9c !important;
+}
 /* ========================================== */
 /* Landing page */
 /* ========================================== */
@@ -103,4 +111,19 @@ body {
   width:23.5%;
   margin-left:420px;
   border-radius: 0.3em;
+}
+
+/* ========================================== */
+/* Adventure Page */
+/* ========================================== */
+.ui.container.adventure.display {
+  padding-top:40px;
+}
+.adventure.bottom.whitespace {
+  padding-top:40px;
+}
+.adventure.bottom.color {
+  padding-top:40px;
+  background-color: #609142;
+  height:60px;
 }
