@@ -36,6 +36,27 @@ FlowRouter.route('/profile', {
   },
 });
 
+FlowRouter.route('/add-activity', {
+  name: 'Add_Activity_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Activity_Page' });
+  },
+});
+
+FlowRouter.route('/adventures', {
+  name: 'Adventures_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Adventures_Page' });
+  },
+});
+
+FlowRouter.route('/dashboard', {
+  name: 'Dashboard_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Dashboard_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
