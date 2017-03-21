@@ -131,6 +131,13 @@ body {
   border: 10px solid transparent;
 }
 
+.ui.adventure.navbar.container .ui.four.item.menu.adventure.page .item {
+  background-color: #ababab;
+  color: #fff;
+  border: none;
+  box-shadow:none;
+}
+
 /* ========================================== */
 /* Add Activity Page */
 /* ========================================== */

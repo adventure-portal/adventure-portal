@@ -1,8 +1,91 @@
 <template name="Dashboard_Page">
   {{#If_Logged_In}}
-    <div style="padding-top: 20px" class="ui dashboard user container">
+  <div style="padding-top: 20px" class="ui container">
+    <h2 class="ui block header">
+      <button class="ui right floated primary button">
+        Add Activity/Event
+      </button>
+      <i class="map icon"></i>
+      <div class="content">
+        Your Adventures
+        <div class="sub header">Manage your adventures and set preferences.</div>
+      </div>
+    </h2>
 
-
+    <div style="padding-top: 20px" class="ui vertical stripe quote segment">
+      <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+          <div class="column">
+            <h3>Event #1</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+          <div class="column">
+            <h3>Event #2</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div style="padding-top: 20px" class="ui vertical stripe quote segment">
+      <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+          <div class="column">
+            <h3>Event #3</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+          <div class="column">
+            <h3>Event #4</h3>
+            <p>Potato potato potato potato potato potato</p>
+            <p>View event details</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="ui container">
+    <h2 class="ui block header">
+      <button class="ui right floated green button">
+        Subscribe
+      </button>
+      <i class="cubes icon"></i>
+
+      <div class="content">
+        Upcoming Events
+        <div class="sub header">The most popular events, hikes, beaches, and more.</div>
+      </div>
+    </h2>
+    <div style="padding-top: 20px" class="ui vertical stripe quote segment">
+      <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+          <div class="column">
+            <h3>Event #1</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+          <div class="column">
+            <h3>Event #2</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 20px" class="ui vertical stripe quote segment">
+      <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+          <div class="column">
+            <h3>Event #3</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+          <div class="column">
+            <h3>Event #4</h3>
+            <p>Potato potato potato potato potato potato</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
   {{/If_Logged_In}}
 </template>
