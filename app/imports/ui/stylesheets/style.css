@@ -127,3 +127,17 @@ body {
   background-color: #609142;
   height:60px;
 }
+.ui.adventure.icon.input .prompt{
+  border: 10px solid transparent;
+}
+
+/* ========================================== */
+/* Add Activity Page */
+/* ========================================== */
+.ui.center.block.header {
+  background-color:  #e6e6e6;
+  box-shadow:none;
+}
+.add.activity.bottom.whitespace {
+  padding-top:40px;
+}
