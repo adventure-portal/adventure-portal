@@ -1,4 +1,5 @@
 # final-project-mockup
+Note: Some pages will not display until you are logged in. To login, use the dropdown. Actual user login page does not work. 
 
 Landing page:
 ![1](https://cloud.githubusercontent.com/assets/13230589/24143914/79a11564-0dcf-11e7-9fe4-2bcf82efc7e7.JPG)
