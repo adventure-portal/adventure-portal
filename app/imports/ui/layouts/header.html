@@ -1,7 +1,7 @@
 <template name="Header">
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
-      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>PortalCore</h1></a>
+      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1>PortalCore</h1></a>
 
       {{#if currentUser}}
       <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i class="dashboard icon"></i>Dashboard</a>
