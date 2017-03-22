@@ -1,6 +1,7 @@
 import './app-body.html';
 import './app-body.js';
 import './app-not-found.html';
+import './app-not-found.js';
 import './footer.html';
 import './header.html';
 import './header.js';

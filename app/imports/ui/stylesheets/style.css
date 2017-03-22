@@ -80,6 +80,15 @@ body {
   margin-left:420px;
   border-radius: 0.3em;
 }
+
+/* Create Account Button */
+.ui.container.user.login.page .ui.create.account.page.button {
+  background-color:#C1ACD5;
+  width:23.5%;
+  margin-left:420px;
+  border-radius: 0.3em;
+  margin-top:20px;
+}
 /* Placeholder color */
 .ui.inverted.fluid.left.icon.input ::-webkit-input-placeholder { /* Chrome */
   color: #fff;
@@ -147,4 +156,23 @@ body {
 }
 .add.activity.bottom.whitespace {
   padding-top:40px;
+}
+
+/* ========================================== */
+/* Not Found Page */
+/* ========================================== */
+
+.not.found.page.background {
+  background: url('https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg') no-repeat center center fixed;
+  background-size:cover;
+  height:740px;
+  margin-top:-61px;
+}
+
+.not.found.page.background .ui.button{
+  margin-left: 875px;
+  position: relative;
+  margin-top:600px;
+  color:#fff;
+
 }

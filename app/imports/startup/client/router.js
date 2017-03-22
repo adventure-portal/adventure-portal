@@ -59,7 +59,7 @@ FlowRouter.route('/dashboard', {
 
 FlowRouter.notFound = {
   action() {
-    BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
+    BlazeLayout.render('App_Not_Found', { main: 'App_Not_Found' });
   },
 };
 
