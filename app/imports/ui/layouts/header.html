@@ -1,7 +1,7 @@
 <template name="Header">
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
-      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1>PortalCore</h1></a>
+      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1>Adventure Portal</h1></a>
 
       {{#if currentUser}}
       <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i class="dashboard icon"></i>Dashboard</a>
@@ -19,9 +19,11 @@
 
       -->
       {{else}}
+      <!--
       <a class="right aligned item" href="{{pathFor 'Login_Page'}}"><i class="privacy icon"></i>Login</a>
-      <a class="item" href="{{ pathFor 'Admin_Login_Page'}}"><i class="legal icon"></i>Admin</a>
-      <a href="#" class="aligned item">{{> loginButtons align="right"}} </a>
+      <a class="item" href="{{ pathFor 'Admin_Login_Page'}}"><i class="legal icon"></i>Admin</a> -->
+
+      <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
       {{/if}}
 
 
