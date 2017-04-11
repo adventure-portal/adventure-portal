@@ -1,14 +1,16 @@
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import { check } from 'meteor/check';
+import { Meteor } from 'meteor/meteor';
 
 /* eslint-disable object-shorthand */
 
-export const Stuff = new Mongo.Collection('Stuff');
+export const Users = new Mongo.Collection('Users');
 
 /**
- * Create the schema for Stuff
+ * Create the schema for Users
  */
-export const StuffSchema = new SimpleSchema({
+export const UserSchema = new SimpleSchema({
   name: {
     label: 'Name',
     type: String,
@@ -30,4 +32,4 @@ export const StuffSchema = new SimpleSchema({
   },
 });
 
-Stuff.attachSchema(StuffSchema);
+Users.attachSchema(UserSchema);
