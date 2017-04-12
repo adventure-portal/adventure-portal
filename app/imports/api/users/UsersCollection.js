@@ -15,7 +15,7 @@ class UsersCollection extends BaseCollection {
    * Creates the Users collection.
    */
   constructor() {
-    super('User', new SimpleSchema({
+    super('Users', new SimpleSchema({
       username: { type: String },
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
