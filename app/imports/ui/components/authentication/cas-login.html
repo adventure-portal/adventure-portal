@@ -1,9 +1,10 @@
 <template name="Cas_Login">
-  <div class="ui primary button">
-      {{#if currentUser}}
-      <div class="cas-logout">Logout</div>
-      {{else}}
-      <div class="cas-login">Login</div>
-      {{/if}}
-    </div>
+  {{#if currentUser}}
+  <!-- LOGOUT BUTTON CONTROLLED IN HEADER.HTML -->
+  {{else}}
+  <button class="ui inverted button cas-login" id="cas-login" href="{{pathFor 'Home_Page'}}">
+    <i class="sign in icon"></i>
+    Login
+  </button>
+  {{/if}}
 </template>
