@@ -8,16 +8,5 @@ Template.Header.onRendered(function enableDropDown() {
 });
 
 Template.Header.events({
-  /**
-   * Handle the click on the logout link.
-   * @param event The click event.
-   * @returns {boolean} False.
-   */
-  'click .cas-logout': function casLogout(event) {
-    event.preventDefault();
-    Meteor.logout();
-    //Even through there is no /landing, it needs to be this
-    FlowRouter.go('/landing');
-    return false;
-  },
+
 });

@@ -9,7 +9,7 @@ Template.Cas_Login.events({
    * @param event The click event.
    * @returns {boolean} False.
    */
-  'click .cas-login': function casLogin(event) {
+  'click .ui.inverted.button.cas-login': function casLogin(event) {
     event.preventDefault();
     const callback = function loginCallback(error) {
       if (error) {
@@ -17,6 +17,18 @@ Template.Cas_Login.events({
       }
     };
     Meteor.loginWithCas(callback);
+    return false;
+  },
+
+  /**
+   * Handle the click on the logout link.
+   * @param event The click event.
+   * @returns {boolean} False.
+   */
+  'click .cas-logout': function casLogout(event) {
+    event.preventDefault();
+    Meteor.logout();
+    FlowRouter.go('/');
     return false;
   },
 });
