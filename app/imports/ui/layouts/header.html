@@ -8,8 +8,8 @@
       <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i class="find icon"></i>Find Adventures</a>
       <a class="{{ isActiveRoute 'Add_Activity_Page'}} item" href="{{ pathFor 'Add_Activity_Page'}}"><i class="add square icon"></i>Add Activity</a>
       <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i class="user icon"></i>My Profile</a>
-      <a class="aligned item" href="{{pathFor 'Login_Page'}}"><i class="privacy icon"></i>Login</a>
-      <a class="item" href="{{ pathFor 'Admin_Login_Page'}}"><i class="legal icon"></i>Admin</a>
+
+      <!-- THIS LINE CONTROLS USER AFTER LOG IN -->
       <a href="#" class="aligned item">{{> loginButtons align="right"}} </a>
 
 
@@ -21,9 +21,12 @@
       {{else}}
       <!--
       <a class="right aligned item" href="{{pathFor 'Login_Page'}}"><i class="privacy icon"></i>Login</a>
-      <a class="item" href="{{ pathFor 'Admin_Login_Page'}}"><i class="legal icon"></i>Admin</a> -->
+      <a class="item" href="{{ pathFor 'Admin_Login_Page'}}"><i class="legal icon"></i>Admin</a>
 
       <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
+
+      -->
+      <div class="right aligned item">{{> Cas_Login }}</div>
       {{/if}}
 
 
