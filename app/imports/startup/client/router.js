@@ -68,8 +68,6 @@ FlowRouter.notFound = {
 
 
 
-
-
 FlowRouter.route('/list', {
   name: 'List_Stuff_Page',
   action() {
