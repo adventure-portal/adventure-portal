@@ -6,15 +6,12 @@ import { _ } from 'meteor/underscore';
 /** @module Base */
 
 /**
- * BaseCollection is an abstract superclass of all RadGrad data model entities.
- * It is the direct superclass for SlugCollection and SemesterCollection.
- * Other collection classes are derived from BaseInstanceCollection or BaseTypeCollection, which are abstract
- * classes that inherit from this one.
+ * BaseCollection is an abstract superclass of all AdventurePortal data model entities.
  */
 class BaseCollection {
 
   /**
-   * Superclass constructor for all RadGrad entities.
+   * Superclass constructor for all AdventurePortal entities.
    * Defines internal fields needed by all entities: _type, _collectionName, _collection, and _schema.
    * @param {String} type The name of the entity defined by the subclass.
    * @param {SimpleSchema} schema The schema for validating fields on insertion to the DB.
@@ -249,6 +246,6 @@ class BaseCollection {
 }
 
 /**
- * The BaseCollection used by all RadGrad entities.
+ * The BaseCollection used by all AdventurePortal entities.
  */
 export default BaseCollection;

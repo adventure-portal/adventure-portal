@@ -1,1 +1,1 @@
-import './basecollection.js';
+import './BaseCollection.js';

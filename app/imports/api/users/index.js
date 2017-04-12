@@ -1,1 +1,1 @@
-import './users.js';
+import './UsersCollection.js';
