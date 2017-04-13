@@ -10,7 +10,7 @@ Template.App_Not_Found.helpers({
 });
 
 Template.App_Not_Found.events({
-  'click .ui.massive.violet.button'(event) {
+  'click .ui.middle.aligned.centered.grid.text.container.teleport button'(event) {
     event.preventDefault();
     FlowRouter.go('Dashboard_Page');
   },
