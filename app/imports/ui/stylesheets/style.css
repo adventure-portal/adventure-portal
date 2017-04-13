@@ -42,6 +42,18 @@ body {
   background-color: rgba(0,0,0,0.3);
 }
 
+landing-navbar {
+  height:61px;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+}
+
+.landing-navbar-up {
+  top: -61px;
+}
+
 h1.landing-logo:hover {
   color:#fff;
 }
