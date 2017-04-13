@@ -1,31 +1,44 @@
 <template name="Header">
+  <!-- If on landing page -->
+  {{#if isActiveRoute 'Home_Page'}}
+  <div class="ui top fixed borderless inverted menu navbar landing">
+    <div class="ui container">
+      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1>Adventure Portal</h1></a>
+      {{#if currentUser}}
+      <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+          class="dashboard icon"></i>Dashboard</a>
+      <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+          class="find icon"></i>Find Adventures</a>
+      <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+          class="user icon"></i>My Profile</a>
+      <!-- Put login/logout button on very right of content-->
+      <div class="item">{{> Cas_Login }}</div>
+      {{else}}
+      <!-- Put login/logout button on right with no content -->
+      <div class="right aligned item">{{> Cas_Login }}</div>
+      {{/if}}
+    </div>
+  </div>
+
+  <!-- If on any other page -->
+  {{else}}
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
       <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1>Adventure Portal</h1></a>
-
       {{#if currentUser}}
-      <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i class="dashboard icon"></i>Dashboard</a>
-      <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i class="find icon"></i>Find Adventures</a>
-      <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i class="user icon"></i>My Profile</a>
-
-      <!-- THIS LINE CONTROLS USER LOGOUT -->
-      <div class="aligned item">{{> Cas_Login }}</div>
-      <!--
-          <a class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Stuff </a>
-          <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">List Stuff</a>
-
-      -->
+      <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+          class="dashboard icon"></i>Dashboard</a>
+      <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+          class="find icon"></i>Find Adventures</a>
+      <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+          class="user icon"></i>My Profile</a>
+      <!-- Put login/logout button on very right of content-->
+      <div class="item">{{> Cas_Login }}</div>
       {{else}}
-      <!--
-      <a class="right aligned item" href="{{pathFor 'Login_Page'}}"><i class="privacy icon"></i>Login</a>
-      <a class="item" href="{{ pathFor 'Admin_Login_Page'}}"><i class="legal icon"></i>Admin</a>
-
-      <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
-
-      -->
+      <!-- Put login/logout button on right with no content -->
       <div class="right aligned item">{{> Cas_Login }}</div>
       {{/if}}
-
     </div>
   </div>
+  {{/if}}
 </template>

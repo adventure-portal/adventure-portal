@@ -1,9 +1,5 @@
 <template name="App_Body">
-  {{#if landingPage}}
-      {{> Landing_Header}}
-  {{else}}
-      {{> Header}}
-  {{/if}}
+  {{> Header}}
   {{>Template.dynamic template=main}}
   {{> Footer}}
 </template>

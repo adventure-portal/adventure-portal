@@ -5,8 +5,6 @@ import './app-not-found.js';
 import './footer.html';
 import './header.html';
 import './header.js';
-import './landing-header.js';
-import './landing-header.html';
 import './if-logged-in.html';
 import './if-logged-in.js';
 import './loading.html';

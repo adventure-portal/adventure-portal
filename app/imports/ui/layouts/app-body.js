@@ -5,12 +5,7 @@ Template.App_Body.onCreated(function appBodyOnCreated() {
 });
 
 Template.App_Body.helpers({
-  // Check to see if currently on landing page
-  landingPage: function landingPage() {
-    if(FlowRouter.current().path == "/") {
-      return true;
-    }
-  },
+
 });
 
 Template.App_Body.events({
