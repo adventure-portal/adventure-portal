@@ -1,10 +1,16 @@
 <template name="If_Logged_In">
   {{#if authInProcess}}
-    <p>loading ...</p>
+  <p>loading ...</p>
   {{else}}
-    {{#if canShow}}
-      {{> UI.contentBlock }}
-    {{else}}
-    {{/if}}
+  {{#if canShow}}
+  {{> UI.contentBlock }}
+  {{else}}
+  <div class="not-loggedin-background">
+    <div class="ui middle aligned centered grid text container">
+      <h1 class="ui main header">Please login to view this content!</h1>
+      <h3 class="ui secondary header">Organize, explore, and find amazing adventures with Adventure Portal!</h3>
+    </div>
+  </div>
+  {{/if}}
   {{/if}}
 </template>
