@@ -52,8 +52,8 @@ Unauthorized Page: In case user tries to navigate anywhere without signing in or
 <img width="720" alt="screenshot 2017-04-13 00 55 08" src="https://cloud.githubusercontent.com/assets/10985239/25002059/0d75fbee-1fe4-11e7-8063-f46649a4b52d.png">
 
 Discussion for Milestone 2: 
-Issue 1: User data collection will need to be linked to the UI for user input
-Issue 2: Tests for data models
-Issue 3: Complete activity collection implementation
-Issue 4: Link activity collection to UI
-Issue 5: Routing from cards, icons, buttons
+*Issue 1: User data collection will need to be linked to the UI for user input
+*Issue 2: Tests for data models
+*Issue 3: Complete activity collection implementation
+*Issue 4: Link activity collection to UI
+*Issue 5: Routing from cards, icons, buttons
