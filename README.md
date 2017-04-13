@@ -31,7 +31,9 @@ Note: Some pages will not display until you are logged in. To login, use the dro
 
 Landing page:
 ![1](https://cloud.githubusercontent.com/assets/13230589/24143914/79a11564-0dcf-11e7-9fe4-2bcf82efc7e7.JPG)
-![2]("https://cloud.githubusercontent.com/assets/10985239/25001778/bd5f8662-1fe2-11e7-867b-174a6f23b522.png)
+<img width="730" alt="screenshot 2017-04-13 00 28 41" src="https://cloud.githubusercontent.com/assets/10985239/25001871/27421914-1fe3-11e7-959a-bce4270ca60a.png">
+
+
 
 CAS login page:
 ![3]("https://cloud.githubusercontent.com/assets/10985239/25001714/7ab079d4-1fe2-11e7-8a50-168a81ba8b50.png)
