@@ -8,4 +8,5 @@ import '/imports/ui/layouts';
 import '/imports/ui/pages';
 import '/imports/ui/stylesheets/style.css';
 import '/imports/ui/components/authentication';
-
+import '/imports/ui/javascript/jquery.min.js';
+import '/imports/ui/javascript/navbar-slider.js';

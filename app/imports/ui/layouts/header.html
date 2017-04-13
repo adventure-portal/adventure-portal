@@ -1,24 +1,28 @@
 <template name="Header">
+
   <!-- If on landing page -->
   {{#if isActiveRoute 'Home_Page'}}
-  <div class="ui top fixed borderless inverted menu navbar landing">
-    <div class="ui container">
-      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
-      {{#if currentUser}}
-      <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
-          class="dashboard icon"></i>Dashboard</a>
-      <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
-          class="find icon"></i>Find Adventures</a>
-      <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
-          class="user icon"></i>My Profile</a>
-      <!-- Put login/logout button on very right of content-->
-      <div class="item">{{> Cas_Login }}</div>
-      {{else}}
-      <!-- Put login/logout button on right with no content -->
-      <div class="right aligned item">{{> Cas_Login }}</div>
-      {{/if}}
+  <landing-navbar class="navbar-slider">
+    <div class="ui top fixed borderless inverted menu navbar landing">
+      <div class="ui container">
+        <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
+        {{#if currentUser}}
+        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+            class="dashboard icon"></i>Dashboard</a>
+        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+            class="find icon"></i>Find Adventures</a>
+        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+            class="user icon"></i>My Profile</a>
+        <!-- Put login/logout button on very right of content-->
+        <div class="item">{{> Cas_Login }}</div>
+        {{else}}
+        <!-- Put login/logout button on right with no content -->
+        <div class="right aligned item">{{> Cas_Login }}</div>
+        {{/if}}
+      </div>
     </div>
-  </div>
+  </landing-navbar>
+
 
   <!-- If on any other page -->
   {{else}}
@@ -41,4 +45,53 @@
     </div>
   </div>
   {{/if}}
+
+
+  <script>
+
+
+
+
+  </script>
+
+
+
+  <script>
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('landing-navbar').outerHeight();
+
+    $(window).scroll(function(event){
+      didScroll = true;
+    });
+
+    setInterval(function() {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
+
+    function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+
+      if (st > lastScrollTop && st > navbarHeight){
+
+        $('landing-navbar').removeClass('.navbar-slider').addClass('landing-navbar-up');
+      } else {
+
+        if(st + $(window).height() < $(document).height()) {
+          $('landing-navbar').removeClass('landing-navbar-up').addClass('.navbar-slider');
+        }
+      }
+
+      lastScrollTop = st;
+    }
+
+  </script>
 </template>
