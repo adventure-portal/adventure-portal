@@ -1,23 +1,55 @@
 <template name="Adventures_Page">
   {{#If_Logged_In}}
   <div style="padding-top: 105px" class="ui middle aligned centered grid text container">
-    <h1>   </h1>
+    <h1></h1>
   </div>
 
-  <div class="ui adventure navbar container">
-    <div class="ui four item menu adventure page">
-      <a class="item">Most Popular</a>
-      <a class="item">Reviews</a>
-      <a class="item">Upcoming Events</a>
-      <a class="item">
-        <div class="ui search">
-          <div class="ui adventure icon input">
-            <input class="prompt" type="text" placeholder="Search Adventures">
-            <i class="search icon"></i>
-          </div>
-          <div class="results"></div>
+  <div class="ui adventure attached stackable container">
+    <div class="ui adventure menu">
+      <div class="ui search item">
+        <div class="ui adventure icon input">
+          <input class="prompt" type="text" placeholder="Search Adventures">
+          <i class="search icon"></i>
         </div>
-      </a>
+        <div class="results"></div>
+      </div>
+
+      <div class="ui dropdown item">
+        <input type="hidden" name="sort-by">
+        <div class="default text">Sort By</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item" data-value="most-popular"><i class="red heart icon"></i> Most Popular</div>
+          <div class="item" data-value="highest-rating"><i class="yellow star icon"></i> Highest Rating</div>
+          <div class="item" data-value="most-comments"><i class="comments icon"></i> Most Comments</div>
+        </div>
+      </div>
+
+      <div class="ui dropdown item">
+        <input type="hidden" name="filter-tags">
+        <div class="default text">Filter By Tags</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item" data-value="hiking">Hiking</div>
+          <div class="item" data-value="beach">Beach</div>
+          <div class="item" data-value="indoor">Indoor</div>
+          <div class="item" data-value="outdoor">Outdoor</div>
+          <div class="item" data-value="free">Free</div>
+          <div class="item" data-value="always-open">Always Open</div>
+        </div>
+      </div>
+
+      <div class="ui dropdown item">
+        <input type="hidden" name="location">
+        <div class="default text">Location</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item" data-value="north-shore">North Shore</div>
+          <div class="item" data-value="manoa">Manoa</div>
+          <div class="item" data-value="waikiki">Waikiki</div>
+          <div class="item" data-value="hawaii-kai">Hawaii Kai</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -26,12 +58,90 @@
       <div class="ui card">
         <div class="content">
           <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
+          Sandy Beach
         </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
+        <div class="ui slide masked reveal image">
+          <img src="/images/sandy.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
         </div>
+
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+          <i class="comment icon"></i>
+          3 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="right floated meta">14h</div>
+          Waikiki Beach
+        </div>
+        <div class="ui slide masked reveal image">
+          <img src="/images/waikiki.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+          <i class="comment icon"></i>
+          3 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="right floated meta">12h</div>
+          Manoa Falls
+        </div>
+        <div class="ui slide masked reveal image">
+          <img src="/images/manoafalls.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div class="content">
     <span class="right floated">
       <i class="heart outline like icon"></i>
@@ -48,140 +158,26 @@
         </div>
       </div>
 
-      <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
-        </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
-        </div>
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
-      </div>
 
       <div class="ui card">
         <div class="content">
           <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
+          St. Louis Heights
         </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
-        </div>
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
+        <div class="ui slide masked reveal image">
+          <img src="/images/heights.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
-        </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
-        </div>
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
-      </div>
-
-      <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
-        </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
-        </div>
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
-      </div>
-
-      <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
-        </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
-        </div>
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
-      </div>
-
-      <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          <img class="ui avatar image"
-               src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg"> Username
-        </div>
-        <div class="image">
-          <img src="https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg">
-        </div>
         <div class="content">
     <span class="right floated">
       <i class="heart outline like icon"></i>
@@ -198,6 +194,146 @@
         </div>
       </div>
     </div>
+
+    <div class="ui fluid four stackable cards">
+      <div class="ui card">
+        <div class="content">
+          <div class="right floated meta">14h</div>
+          Waikiki Beach
+        </div>
+        <div class="ui slide masked reveal image">
+          <img src="/images/waikiki.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+          <i class="comment icon"></i>
+          3 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="right floated meta">12h</div>
+          Manoa Falls
+        </div>
+        <div class="ui slide masked reveal image">
+          <img src="/images/manoafalls.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+          <i class="comment icon"></i>
+          3 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="right floated meta">14h</div>
+          St. Louis Heights
+        </div>
+        <div class="ui slide masked reveal image">
+          <img src="/images/heights.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+          <i class="comment icon"></i>
+          3 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="right floated meta">14h</div>
+          Sandy Beach
+        </div>
+        <div class="ui slide masked reveal image">
+          <img src="/images/sandy.jpg" class="visible content">
+          <div class="hidden content">
+            <div style="padding-top:115px" class="ui center aligned container">
+              <button class="ui icon button">
+                <i class="add to calendar icon"></i>
+              </button>
+              <button class="ui icon button">
+                <i class="empty star icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+          <i class="comment icon"></i>
+          3 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="adventure bottom whitespace"></div>
@@ -206,9 +342,10 @@
   </div>
 
 
-
   {{/If_Logged_In}}
+  <script>$('.ui.dropdown').dropdown();</script>
 </template>
+
 
 <!--
 
