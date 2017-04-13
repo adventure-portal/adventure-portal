@@ -54,7 +54,7 @@ h1.landing-logo:hover {
 }
 
 /* ========================================== */
-/* Landing page */
+/* LANDING PAGE content */
 /* ========================================== */
 .home-page-main-background {
   background: url('http://www.wallpaperbetter.com/wallpaper/491/156/919/diamond-head-at-sunset-hawaii-usa-beautiful-city-sea-coast-1080P-wallpaper.jpg') no-repeat center center fixed;
@@ -264,21 +264,23 @@ h1.landing-logo:hover {
 /* Not Found Page */
 /* ========================================== */
 
-.not.found.page.background {
-  background: url('https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg') no-repeat center center fixed;
+.not-found-page-background {
+  background: url('http://vignette3.wikia.nocookie.net/steamtradingcards/images/4/45/Kerbal_Space_Program_Background_Lost_in_Space.jpg/revision/latest?cb=20141120083329') no-repeat center center fixed;
   background-size: cover;
-  height: 740px;
-  margin-top: -61px;
+  height: 1000px;
 }
 
-.not.found.page.background .ui.button {
-  margin-left: 875px;
-  position: relative;
-  margin-top: 600px;
-  color: #fff;
-
+.not-found-page-background .ui.main.header {
+  margin-top: 150px;
+  font-size:35px;
+  color: #18bc9c;
+  padding-bottom:20px;
 }
 
+.ui.middle.aligned.centered.grid.text.container.teleport button {
+  background-color: #00b5ad;
+  color:#fff;
+}
 
 /* ========================================== */
 /* Not Login Page */
