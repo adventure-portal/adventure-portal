@@ -1,32 +1,131 @@
 <template name="My_Profile_Page">
   {{#If_Logged_In}}
   <div style="padding-top: 81px" class="ui container">
+    <div class="ui segment">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <img
+                src="https://raw.githubusercontent.com/dylannakahodo/dylannakahodo.github.io/master/images/sq_profile.jpg">
+          </div>
+          <div class="content">
+            <i class="ui right floated big edit icon"></i>
+            <div class="ui list">
+              <h2>Dylan Nakahodo</h2>
+              <div class="item"><i class="user icon"></i>
+                <div class="content">@dylankhn</div>
+              </div>
+              <div class="item"><i class="mail icon"></i>
+                <div class="content">dylankhn@hawaii.edu</div>
+              </div>
+              <strong>Interests: </strong>
+              <div class="item">
+                <span class="ui red tag label">Hiking</span>
+                <span class="ui red tag label">Surfing</span>
+                <span class="ui red tag label">Paddling</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="item">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum."
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 40px" class="ui container">
     <h2 class="ui block header">
       <button class="ui right floated green button">
-        Edit
+        View More
       </button>
-      <i class="edit icon"></i>
-
+      <i class="yellow star icon"></i>
       <div class="content">
-        Account Settings
-        <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+        Favorite Adventures
+        <div class="sub header">All of your favorite adventures in one place.</div>
       </div>
     </h2>
 
-    <div style="padding-top: 20px" class="ui vertical stripe quote segment">
-      <div class="ui equal width stackable internally celled grid">
-        <div class="center aligned row">
-          <div class="column">
-            <h3>Text</h3>
-            <p>This is what they al lsay about us</p>
+    <div class="ui container adventure display">
+      <div class="ui fluid three stackable cards">
+        <div class="ui card">
+          <div class="content">
+            <i class="right floated big yellow star icon"></i>
+            <strong>Beach</strong>
           </div>
-          <div class="column">
-            <h3>Text</h3>
-            <p>This is what they al lsay about us</p>
+          <div class="image">
+            <img
+                src="http://www.kauai-vacation-rentals.com/wp-content/uploads/2014/10/Anahola-Beach.jpg_high_2129553.jpg">
+          </div>
+          <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+            <i class="comment icon"></i>
+            3 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <div class="content">
+            <i class="right floated big yellow star icon"></i>
+            <strong>Hiking</strong>
+          </div>
+          <div class="image">
+            <img
+                src="https://i.ytimg.com/vi/BHr7NijWMrc/maxresdefault.jpg">
+          </div>
+          <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+            <i class="comment icon"></i>
+            3 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <div class="content">
+            <i class="right floated big yellow star icon"></i>
+            <strong>Surfing</strong>
+          </div>
+          <div class="image">
+            <img
+                src="http://exoticvoyage.com/wp-content/uploads/2015/04/surfing1.jpg">
+          </div>
+          <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+            <i class="comment icon"></i>
+            3 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="adventure bottom whitespace"></div>
   {{/If_Logged_In}}
 </template>

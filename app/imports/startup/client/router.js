@@ -29,13 +29,6 @@ FlowRouter.route('/profile', {
   },
 });
 
-FlowRouter.route('/profile', {
-  name: 'My_Profile_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'My_Profile_Page' });
-  },
-});
-
 FlowRouter.route('/add-activity', {
   name: 'Add_Activity_Page',
   action() {
