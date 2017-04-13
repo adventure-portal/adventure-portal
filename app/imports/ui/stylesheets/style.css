@@ -39,7 +39,14 @@ body {
 /* ========================================== */
 
 .ui.top.fixed.borderless.inverted.menu.navbar.landing {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.3);
+}
+
+h1.landing-logo:hover {
+  color:#fff;
+}
+.ui.top.fixed.borderless.inverted.menu.navbar.landing .ui.container a:hover {
+  color:#fff;
 }
 
 .ui.top.fixed.borderless.inverted.menu.navbar.landing .ui.container .item {
@@ -270,4 +277,31 @@ body {
   margin-top: 600px;
   color: #fff;
 
+}
+
+
+/* ========================================== */
+/* Not Login Page */
+/* ========================================== */
+
+.not-loggedin-background {
+  background: url('http://wallup.net/wp-content/uploads/2016/04/06/336383-night-camping-stars-landscape-Milky_Way.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 750px;
+  /*
+  ALTERNATE SIMPLE VERSION
+
+  background-color: #282C35;
+  height: 750px;
+  color: #18bc9c;
+   */
+}
+.not-loggedin-background .ui.main.header {
+  margin-top: 300px;
+  font-size:35px;
+  color: #fff;
+}
+.not-loggedin-background .ui.secondary.header {
+  font-size: 20px;
+  color: #18bc9c;
 }
