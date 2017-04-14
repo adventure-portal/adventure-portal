@@ -1,24 +1,25 @@
 <template name="Header">
+
   <!-- If on landing page -->
   {{#if isActiveRoute 'Home_Page'}}
-  <div class="ui top fixed borderless inverted menu navbar landing">
-    <div class="ui container">
-      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
-      {{#if currentUser}}
-      <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
-          class="dashboard icon"></i>Dashboard</a>
-      <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
-          class="find icon"></i>Find Adventures</a>
-      <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
-          class="user icon"></i>My Profile</a>
-      <!-- Put login/logout button on very right of content-->
-      <div class="item">{{> Cas_Login }}</div>
-      {{else}}
-      <!-- Put login/logout button on right with no content -->
-      <div class="right aligned item">{{> Cas_Login }}</div>
-      {{/if}}
-    </div>
-  </div>
+  <landing-navbar class="navbar-slider">
+      <div class="ui top container fixed borderless inverted grid landing">
+        <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
+        {{#if currentUser}}
+        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+            class="dashboard icon"></i>Dashboard</a>
+        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+            class="find icon"></i>Find Adventures</a>
+        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+            class="user icon"></i>My Profile</a>
+        <!-- Put login/logout button on very right of content-->
+        <div class="item">{{> Cas_Login }}</div>
+        {{else}}
+        <!-- Put login/logout button on right with no content -->
+        <div class="right aligned item">{{> Cas_Login }}</div>
+        {{/if}}
+      </div>
+  </landing-navbar>
 
   <!-- If on any other page -->
   {{else}}

@@ -38,19 +38,26 @@ body {
 /* LANDING PAGE Top navigation bar */
 /* ========================================== */
 
-.ui.top.fixed.borderless.inverted.menu.navbar.landing {
+landing-navbar {
   background-color: rgba(0,0,0,0.3);
+  height:61px;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+  border:none;
 }
-
-h1.landing-logo:hover {
+.landing-navbar-up {
+  top: -61px;
+}
+.ui.top.container.fixed.borderless.inverted.grid.landing {
+  margin-top:12px;
+}
+.ui.top.container.fixed.borderless.inverted.grid.landing .landing-logo {
+  margin-right:700px;
+  padding-left:16px;
   color:#fff;
-}
-.ui.top.fixed.borderless.inverted.menu.navbar.landing .ui.container a:hover {
-  color:#fff;
-}
-
-.ui.top.fixed.borderless.inverted.menu.navbar.landing .ui.container .item {
-  background-color: rgba(0,0,0,0);
+  padding-top:1px;
 }
 
 /* ========================================== */
