@@ -25,7 +25,7 @@
   {{else}}
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
-      <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1>Adventure Portal</h1></a>
+      <a class="item" href="{{pathFor 'Dashboard_Page'}}">        <img class="ui centered small image" src="/images/adventure-portal-logo2.png"></a>
       {{#if currentUser}}
       <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
           class="dashboard icon"></i>Dashboard</a>
