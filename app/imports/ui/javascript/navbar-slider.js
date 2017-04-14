@@ -19,7 +19,7 @@ setInterval(function() {
     hasScrolled();
     didScroll = false;
   }
-}, 250);
+}, 800);
 
 function hasScrolled() {
   var st = $(this).scrollTop();
@@ -32,11 +32,11 @@ function hasScrolled() {
   // This is necessary so you never see what is "behind" the navbar.
   if (st > lastScrollTop && st > navbarHeight){
     // Scroll Down
-    $('landing-navbar').removeClass('.navbar-slider').addClass('landing-navbar-up');
+    $('landing-navbar').removeClass('navbar-slider').addClass('landing-navbar-up');
   } else {
     // Scroll Up
     if(st + $(window).height() < $(document).height()) {
-      $('landing-navbar').removeClass('landing-navbar-up').addClass('.navbar-slider');
+      $('landing-navbar').removeClass('landing-navbar-up').addClass('navbar-slider');
     }
   }
 
