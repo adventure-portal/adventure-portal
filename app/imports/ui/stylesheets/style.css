@@ -57,7 +57,7 @@ h1.landing-logo:hover {
 /* LANDING PAGE content */
 /* ========================================== */
 .home-page-main-background {
-  background: url('http://www.wallpaperbetter.com/wallpaper/491/156/919/diamond-head-at-sunset-hawaii-usa-beautiful-city-sea-coast-1080P-wallpaper.jpg') no-repeat center center fixed;
+  background: url('/images/home-page-background1.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 750px;
 }
@@ -207,7 +207,7 @@ h1.landing-logo:hover {
 /* Admin Login Page */
 /* ========================================== */
 .admin-login-page {
-  background: url('http://apis.xogrp.com/media-api/images/27b736f4-fbf3-4b2e-a08c-7f5abaf6d370') no-repeat center center fixed;
+  background: url('/images/home-page-background.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 750px;
 }
@@ -265,7 +265,7 @@ h1.landing-logo:hover {
 /* ========================================== */
 
 .not-found-page-background {
-  background: url('http://vignette3.wikia.nocookie.net/steamtradingcards/images/4/45/Kerbal_Space_Program_Background_Lost_in_Space.jpg/revision/latest?cb=20141120083329') no-repeat center center fixed;
+  background: url('/images/404.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 1000px;
 }
@@ -287,7 +287,7 @@ h1.landing-logo:hover {
 /* ========================================== */
 
 .not-loggedin-background {
-  background: url('http://wallup.net/wp-content/uploads/2016/04/06/336383-night-camping-stars-landscape-Milky_Way.jpg') no-repeat center center fixed;
+  background: url('/images/unauthorized.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 750px;
   /*
