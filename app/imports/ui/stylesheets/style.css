@@ -38,12 +38,6 @@ body {
 /* LANDING PAGE Top navigation bar */
 /* ========================================== */
 
-/*
-.ui.top.fixed.borderless.inverted.menu.navbar.landing {
-  background-color: rgba(0,0,0,0.3);
-}
-
-*/
 landing-navbar {
   background-color: rgba(0,0,0,0.3);
   height:61px;
@@ -53,21 +47,17 @@ landing-navbar {
   width: 100%;
   border:none;
 }
-
 .landing-navbar-up {
   top: -61px;
 }
-
-h1.landing-logo:hover {
-  color:#fff;
+.ui.top.container.fixed.borderless.inverted.grid.landing {
+  margin-top:12px;
 }
-
-.ui.top.fixed.borderless.inverted.menu.navbar.landing .ui.container a:hover {
+.ui.top.container.fixed.borderless.inverted.grid.landing .landing-logo {
+  margin-right:700px;
+  padding-left:16px;
   color:#fff;
-}
-
-.ui.top.fixed.borderless.inverted.menu.navbar.landing .ui.container .item {
-  background-color: rgba(0,0,0,0);
+  padding-top:1px;
 }
 
 /* ========================================== */

@@ -3,8 +3,7 @@
   <!-- If on landing page -->
   {{#if isActiveRoute 'Home_Page'}}
   <landing-navbar class="navbar-slider">
-    <!-- <div class="ui top container fixed borderless inverted navbar landing"> -->
-      <div class="ui container">
+      <div class="ui top container fixed borderless inverted grid landing">
         <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
         {{#if currentUser}}
         <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
@@ -20,7 +19,6 @@
         <div class="right aligned item">{{> Cas_Login }}</div>
         {{/if}}
       </div>
-    <!-- </div> -->
   </landing-navbar>
 
   <!-- If on any other page -->
