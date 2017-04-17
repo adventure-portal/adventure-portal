@@ -63,7 +63,7 @@ class BaseCollection {
   /**
    * A stricter form of findOne, in that it throws an exception if the entity isn't found in the collection.
    * @param { String | Object } name Either the docID, or an object selector, or the 'name' field value, or the
-   * username field value.
+   * hours field value.
    * @returns { Object } The document associated with name.
    * @throws { Meteor.Error } If the document cannot be found.
    */
@@ -114,7 +114,7 @@ class BaseCollection {
 
   /**
    * Returns true if the passed entity is in this collection.
-   * @param { String | Object } name The docID, or an object specifying a document, or the name, or the username.
+   * @param { String | Object } name The docID, or an object specifying a document, or the name, or the hours.
    * @returns {boolean} True if name exists in this collection.
    */
   isDefined(name) {
