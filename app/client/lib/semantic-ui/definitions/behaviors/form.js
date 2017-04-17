@@ -1093,7 +1093,7 @@ $.fn.form.settings = {
   regExp: {
     bracket : /\[(.*)\]/i,
     decimal : /^\d*(\.)\d+/,
-    email   : /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i,
+    cost   : /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i,
     escape  : /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,
     flags   : /^\/(.*)\/(.*)?/,
     integer : /^\-?\d+$/,
@@ -1109,7 +1109,7 @@ $.fn.form.settings = {
   prompt: {
     empty                : '{name} must have a value',
     checked              : '{name} must be checked',
-    email                : '{name} must be a valid e-mail',
+    cost                : '{name} must be a valid e-mail',
     url                  : '{name} must be a valid url',
     regExp               : '{name} is not formatted correctly',
     integer              : '{name} must be an integer',
@@ -1199,9 +1199,9 @@ $.fn.form.settings = {
       return ($(this).filter(':checked').length > 0);
     },
 
-    // is most likely an email
-    email: function(value){
-      return $.fn.form.settings.regExp.email.test(value);
+    // is most likely an cost
+    cost: function(value){
+      return $.fn.form.settings.regExp.cost.test(value);
     },
 
     // value is most likely url
