@@ -23,10 +23,9 @@
       </div>
   </landing-navbar>
 
-  <!-- If on dashboard page and not logged in -->
+  <!-- If on dashboard page-->
   {{else if isActiveRoute 'Dashboard_Page' }}
-    <!-- Empty, dont want anything to happen when on dashboard and logged in -->
-
+  <!-- If on dashboard page and logged in -->
   {{#if currentUser}}
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
@@ -49,6 +48,7 @@
       {{/if}}
     </div>
   </div>
+  <!-- If still on dashboard but not logged in yet -->
   {{else}}
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
