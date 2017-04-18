@@ -46,18 +46,16 @@ landing-navbar {
   transition: top 0.2s ease-in-out;
   width: 100%;
   border:none;
+  z-index:3;
 }
 .landing-navbar-up {
   top: -61px;
 }
-.ui.top.container.fixed.borderless.inverted.grid.landing {
-  margin-top:12px;
+.ui.container.borderless.inverted.menu.landing {
+  background-color: rgba(0,0,0,0);
 }
-.ui.top.container.fixed.borderless.inverted.grid.landing .landing-logo {
-  margin-right:700px;
-  padding-left:16px;
-  color:#fff;
-  padding-top:1px;
+.ui.inverted.menu a.item:hover {
+  background:none;
 }
 
 /* ========================================== */

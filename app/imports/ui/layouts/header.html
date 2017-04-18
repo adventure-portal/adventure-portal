@@ -1,9 +1,8 @@
 <template name="Header">
-
   <!-- If on landing page -->
   {{#if isActiveRoute 'Home_Page'}}
   <landing-navbar class="navbar-slider">
-      <div class="ui top container fixed borderless inverted grid landing">
+      <div class="ui container borderless inverted menu landing">
         <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
         {{#if currentUser}}
         <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
