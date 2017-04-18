@@ -30,11 +30,11 @@ class UsersCollection extends BaseCollection {
   /**
    * Defines a new User.
    * @example
-   * Users.define({ name: 'John',
-   *                location: 'Doe',
-   *                hours: 'jdoe',
-   *                cost: 'jdoe@example.com',
-   *                rating: 'Born and raised on Oahu. Love hiking and surfing.',
+   * Users.define({ firstName: 'John',
+   *                lastName: 'Doe',
+   *                username: 'jdoe',
+   *                email: 'jdoe@example.com',
+   *                bio: 'Born and raised on Oahu. Love hiking and surfing.',
    *                interests: ['Surfing', 'Hiking', 'Camping'],
    *                currentActivities: ['Kuliouou Ridge Trail', 'Diamond Head Hike', 'Surfing at White Plains'],
    *                picture: 'http://johndoe.com/profile.png'});

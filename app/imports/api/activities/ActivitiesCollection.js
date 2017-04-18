@@ -17,7 +17,7 @@ class ActivitiesCollection extends BaseCollection {
    */
   constructor() {
     super('Activities', new SimpleSchema({
-      name: { type: String },
+      title: { type: String },
       location: { type: String, optional: true },
       hours: { type: String, optional: true },
       cost: { type: String, optional: true },
@@ -28,19 +28,26 @@ class ActivitiesCollection extends BaseCollection {
   }
 
   /**
-   * Defines a new Activities.
+   * Defines a new activity.
    * @example
-   * .define({ name: 'Software Engineering',
-   *                    description: 'Methods for group development of large, high quality software systems' });
-   * @param { Object } description Object with keys name and description.
-   * Name must be previously undefined. Description is optional.
-   * Creates a "slug" for this name and stores it in the slug field.
-   * @throws {Meteor.Error} If the Activities definition includes a defined name.
+   * Users.define({ title: 'Manoa Falls',
+   *                location: 'Manoa',
+   *                hours: '8 AM - 5 PM',
+   *                cost: '$0',
+   *                rating: '4 Stars',
+
+   *                picture: 'http://johndoe.com/profile.png'});
+   * @param { Object } description Object with required key hours.
+   * The rest of the keys are optional.
+   * Username must be unique for all users. It should be the UH cost account.
+   * Interests is an array of defined interest names.
+   * @throws { Meteor.Error } If a user with the supplied hours already exists.
    * @returns The newly created docID.
    */
-  define({ name, location, hours, cost, rating, picture, description }) {
+
+  define({ title, location, hours, cost, rating, picture, description }) {
     const checkPattern = {
-      name: String,
+      title: String,
       location: String,
       hours: String,
       cost: String,
@@ -48,12 +55,12 @@ class ActivitiesCollection extends BaseCollection {
       picture: String,
       description: String,
     };
-    check({ name, location, hours, cost, rating, picture, description }, checkPattern);
+    check({ title, location, hours, cost, rating, picture, description }, checkPattern);
 
-    if (this.find({ name }).count() > 0) {
+    if (this.find({ title }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined.`);
     }
-    return this._collection.insert({ name, location, hours, cost, rating, picture, description });
+    return this._collection.insert({ title, location, hours, cost, rating, picture, description });
   }
 
   /**
@@ -63,14 +70,14 @@ class ActivitiesCollection extends BaseCollection {
    */
   dumpOne(docID) {
     const doc = this.findDoc(docID);
-    const name = doc.name;
+    const title = doc.title;
     const location = doc.location;
     const hours = doc.hours;
     const cost = doc.cost;
     const rating = doc.rating;
     const picture = doc.picture;
     const description = doc.description;
-    return { name, location, hours, cost, rating, picture, description };
+    return { title, location, hours, cost, rating, picture, description };
   }
 }
 
