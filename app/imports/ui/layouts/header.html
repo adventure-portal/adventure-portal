@@ -3,7 +3,10 @@
   {{#if isActiveRoute 'Home_Page'}}
   <landing-navbar class="navbar-slider">
       <div class="ui container borderless inverted menu landing">
-        <a class="item" href="{{pathFor 'Dashboard_Page'}}"><h1 class="landing-logo">Adventure Portal</h1></a>
+        <a class="aligned item" href="{{pathFor 'Home_Page'}}">
+          <img class="ui mini aligned image" src="/images/adventure-portal-logo.png">
+          <center class="navbar-logo">Adventure Portal</center>
+        </a>
         {{#if currentUser}}
         <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
             class="dashboard icon"></i>Dashboard</a>
@@ -24,7 +27,10 @@
   {{else}}
   <div class="ui top fixed borderless inverted menu navbar">
     <div class="ui container">
-      <a class="item" href="{{pathFor 'Dashboard_Page'}}">        <img class="ui centered small image" src="/images/adventure-portal-logo2.png"></a>
+      <a class="item" href="{{pathFor 'Dashboard_Page'}}">
+        <img class="ui mini aligned image" src="/images/adventure-portal-logo.png">
+        <center class="navbar-logo">Adventure Portal</center>
+      </a>
       {{#if currentUser}}
       <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
           class="dashboard icon"></i>Dashboard</a>

@@ -31,9 +31,8 @@ body {
   color: #18bc9c !important;
 }
 
-.ui.inverted.menu .item, .ui.inverted.menu .item > a:not(.ui):hover {
-  color: #18bc9c;
-}
+/* Controls logo color of landing page */
+
 /* ========================================== */
 /* LANDING PAGE Top navigation bar */
 /* ========================================== */
@@ -56,6 +55,11 @@ landing-navbar {
 }
 .ui.inverted.menu a.item:hover {
   background:none;
+}
+
+center.navbar-logo{
+  font-size:18px;
+  margin-left:10px;
 }
 
 /* ========================================== */
