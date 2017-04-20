@@ -29,3 +29,10 @@ Template.If_Authorized.helpers({
     return (routeUserName === loggedInUserName);
   },
 });
+
+Template.If_Authorized.events({
+  'click .ui.middle.aligned.centered.grid.text.container.not.authorized button'(event) {
+    event.preventDefault();
+    FlowRouter.go('Home_Page');
+  },
+});
