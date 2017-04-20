@@ -38,11 +38,11 @@ class UsersCollection extends BaseCollection {
    *                interests: ['Surfing', 'Hiking', 'Camping'],
    *                currentActivities: ['Kuliouou Ridge Trail', 'Diamond Head Hike', 'Surfing at White Plains'],
    *                picture: 'http://johndoe.com/profile.png'});
-   * @param { Object } description Object with required key hours.
+   * @param { Object } description Object with required key username.
    * The rest of the keys are optional.
-   * Username must be unique for all users. It should be the UH cost account.
+   * Username must be unique for all users. It should be the UH email account.
    * Interests is an array of defined interest names.
-   * @throws { Meteor.Error } If a user with the supplied hours already exists.
+   * @throws { Meteor.Error } If a user with the supplied username already exists.
    * @returns The newly created docID.
    */
   define({ firstName = '', lastName = '', username, email = '', bio = '', interests, currentActivities,

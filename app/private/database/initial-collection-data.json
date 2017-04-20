@@ -1,4 +1,3 @@
-
 /*
 {
   "comment": "Initial contents for the Adventure Portal database. For development purposes only.",
@@ -79,72 +78,89 @@
           "description": ""
         }
       ]
-    },
-    {
-      "name": "ProfileCollection",
-      "contents": [
-        {
-          "name": "Lee",
-          "location": "Altenberg",
-          "hours": "altenber",
-          "rating": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Evolutionary Computation"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/altenberg.jpg"
-        },
-        {
-          "name": "Kyungim",
-          "location": "Baek",
-          "hours": "baek",
-          "rating": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Computer Vision"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/baek.jpg"
-        },
-        {
-          "name": "Edo",
-          "location": "Biagioni",
-          "hours": "esb",
-          "rating": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Mobile Networks",
-            "Sailing"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/biagioni.jpg"
-        },
-        {
-          "name": "Kim",
-          "location": "Binsted",
-          "hours": "binsted",
-          "rating": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Mars",
-            "Imu Cooking"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/binsted.jpg"
-        },
-        {
-          "name": "Henri",
-          "location": "Casanova",
-          "hours": "henric",
-          "github": "henricasanova",
-          "rating": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Surfing",
-            "Photography"
-          ],
-          "title": "Professor, Information and Computer Sciences",
-          "picture": "/images/casanova.jpg"
-        }
-      ]
-    }
-  ]
+    },*/
+
+{
+"collections": [
+{
+"name": "ActivitiesCollection",
+"contents": [
+{
+"title": "Manoa Falls",
+"location": "Manoa",
+"hours": "8AM - 4PM",
+"cost": "$0",
+"rating": "4 Stars",
+"interests": ["Hike", "Waterfalls"],
+"picture": "/images/manoafalls.jpg",
+"description": "Manoa is whats up right now"
+},
+{
+"title": "Manoa Falls",
+"location": "Manoa",
+"hours": "8AM - 4PM",
+"cost": "$0",
+"rating": "4 Stars",
+"interests": ["Hike", "Waterfalls"],
+"picture": "/images/manoafalls.jpg",
+"description": "Manoa is whats up right now"
+}, {
+"title": "Manoa Falls",
+"location": "Manoa",
+"hours": "8AM - 4PM",
+"cost": "$0",
+"rating": "4 Stars",
+"interests": ["Hike", "Waterfalls"],
+"picture": "/images/manoafalls.jpg",
+"description": "Manoa is whats up right now"
+}, {
+"title": "Manoa Falls",
+"location": "Manoa",
+"hours": "8AM - 4PM",
+"cost": "$0",
+"rating": "4 Stars",
+"interests": ["Hike", "Waterfalls"],
+"picture": "/images/manoafalls.jpg",
+"description": "Manoa is whats up right now"
+}
+]
+},
+  {
+    "name": "UsersCollection",
+    "contents": [
+      {
+        "firstName": "Phillip",
+        "lastName": "Johnson",
+        "username": "pmjohnson",
+        "email": "pmjohnson@hawaii.edu",
+        "bio": "This is the teacher of this class",
+        "picture": "/images/sandy.jpg"
+      },
+      {
+        "firstName": "Phillip",
+        "lastName": "Johnson",
+        "username": "pmjohnson",
+        "email": "pmjohnson@hawaii.edu",
+        "bio": "This is the teacher of this class",
+        "picture": "/images/sandy.jpg"
+      }, {
+        "firstName": "Phillip",
+        "lastName": "Johnson",
+        "username": "pmjohnson",
+        "email": "pmjohnson@hawaii.edu",
+        "bio": "This is the teacher of this class",
+        "picture": "/images/sandy.jpg"
+      }, {
+        "firstName": "Phillip",
+        "lastName": "Johnson",
+        "username": "pmjohnson",
+        "email": "pmjohnson@hawaii.edu",
+        "bio": "This is the teacher of this class",
+        "picture": "/images/sandy.jpg"
+      }
+    ]
+  }
+
+]
 }
 
-*/

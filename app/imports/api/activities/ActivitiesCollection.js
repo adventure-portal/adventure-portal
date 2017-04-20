@@ -22,6 +22,7 @@ class ActivitiesCollection extends BaseCollection {
       hours: { type: String, optional: true },
       cost: { type: String, optional: true },
       rating: { type: String, optional: true },
+      interests: { type: [String], optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       description: { type: String, optional: true },
     }));
@@ -35,8 +36,9 @@ class ActivitiesCollection extends BaseCollection {
    *                hours: '8 AM - 5 PM',
    *                cost: '$0',
    *                rating: '4 Stars',
-
    *                picture: 'http://johndoe.com/profile.png'});
+   *                description: 'A fun hike for all ages, best during sunny days in Manoa
+   *                since the hike can become extremely muddy during the rainy season';
    * @param { Object } description Object with required key hours.
    * The rest of the keys are optional.
    * Username must be unique for all users. It should be the UH cost account.
@@ -45,7 +47,7 @@ class ActivitiesCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ title, location, hours, cost, rating, picture, description }) {
+  define({ title, location, hours, cost, rating, interests, picture, description }) {
     const checkPattern = {
       title: String,
       location: String,
@@ -55,7 +57,7 @@ class ActivitiesCollection extends BaseCollection {
       picture: String,
       description: String,
     };
-    check({ title, location, hours, cost, rating, picture, description }, checkPattern);
+    check({ title, location, hours, cost, rating, interests, picture, description }, checkPattern);
 
     if (this.find({ title }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined.`);
@@ -75,9 +77,10 @@ class ActivitiesCollection extends BaseCollection {
     const hours = doc.hours;
     const cost = doc.cost;
     const rating = doc.rating;
+    const interests = doc.interests;
     const picture = doc.picture;
     const description = doc.description;
-    return { title, location, hours, cost, rating, picture, description };
+    return { title, location, hours, cost, rating, interests, picture, description };
   }
 }
 
