@@ -7,6 +7,12 @@ Template.Header.onRendered(function enableDropDown() {
   this.$('.dropdown').dropdown();
 });
 
+Template.Header.helpers({
+  routeUserName() {
+    return Meteor.user().profile.name;
+  },
+});
+
 Template.Header.events({
 
 });

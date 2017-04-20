@@ -8,11 +8,11 @@
           <center class="navbar-logo">Adventure Portal</center>
         </a>
         {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page' username=routeUserName}}"><i
             class="dashboard icon"></i>Dashboard</a>
-        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page' username=routeUserName}}"><i
             class="find icon"></i>Find Adventures</a>
-        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page' username=routeUserName}}"><i
             class="user icon"></i>My Profile</a>
         <!-- Put login/logout button on very right of content-->
         <div class="item">{{> Cas_Login }}</div>
@@ -28,16 +28,16 @@
     {{#if currentUser}}
     <div class="ui top fixed borderless inverted menu navbar">
       <div class="ui container">
-        <a class="item" href="{{pathFor 'Home_Page'}}">
+        <a class="item" href="{{pathFor 'Home_Page' username=routeUserName}}">
           <img class="ui mini aligned image" src="/images/adventure-portal-logo.png">
           <center class="navbar-logo">Adventure Portal</center>
         </a>
         {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page' username=routeUserName}}"><i
             class="dashboard icon"></i>Dashboard</a>
-        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page' username=routeUserName}}"><i
             class="find icon"></i>Find Adventures</a>
-        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page' username=routeUserName}}"><i
             class="user icon"></i>My Profile</a>
         <!-- Put login/logout button on very right of content-->
         <div class="item">{{> Cas_Login }}</div>
@@ -56,11 +56,11 @@
           <center class="navbar-logo">Adventure Portal</center>
         </a>
         {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page' username=routeUserName}}"><i
             class="dashboard icon"></i>Dashboard</a>
-        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page' username=routeUserName}}"><i
             class="find icon"></i>Find Adventures</a>
-        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page' username=routeUserName}}"><i
             class="user icon"></i>My Profile</a>
         <!-- Put login/logout button on very right of content-->
         <div class="item">{{> Cas_Login }}</div>
@@ -80,11 +80,11 @@
           <center class="navbar-logo">Adventure Portal</center>
         </a>
         {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page'}}"><i
+        <a class="{{ isActiveRoute 'Dashboard_Page'}} right item" href="{{ pathFor 'Dashboard_Page' username=routeUserName}}"><i
             class="dashboard icon"></i>Dashboard</a>
-        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page'}}"><i
+        <a class="{{ isActiveRoute 'Adventures_Page'}} item" href="{{ pathFor 'Adventures_Page' username=routeUserName}}"><i
             class="find icon"></i>Find Adventures</a>
-        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page'}}"><i
+        <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page' username=routeUserName}}"><i
             class="user icon"></i>My Profile</a>
         <!-- Put login/logout button on very right of content-->
         <div class="item">{{> Cas_Login }}</div>
