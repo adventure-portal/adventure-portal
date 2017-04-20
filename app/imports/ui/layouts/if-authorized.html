@@ -1,0 +1,27 @@
+<template name="If_Authorized">
+  {{#if authInProcess}}
+    {{> Loading }}
+  {{else}}
+    {{#if Template.subscriptionsReady}}
+      {{#if isAuthorized}}
+        {{> UI.contentBlock }}
+      {{else}}
+        <div class="not-authorized-page-background">
+          <div class="ui middle aligned centered grid text container not authorized">
+            <h1 class="ui main header">You are not authorized to view this page!</h1>
+          </div>
+          <div class="ui middle aligned centered grid text container not authorized">
+            <button class="massive ui button">Home</button>
+          </div>
+          <div class="ui middle aligned centered grid text container invader">
+            <img class="ui image" src="https://static1.squarespace.com/static/50113811e4b0e82fefb71a08/t/51b9b85be4b034d82d53d1cb/1371125873142/tumblr_miybosjg0b1rvoa93o1_500.gif">
+          </div>
+
+
+
+
+        </div>
+      {{/if}}
+    {{/if}}
+  {{/if}}
+</template>
