@@ -320,7 +320,7 @@ center.navbar-logo{
 /* ========================================== */
 
 .not-authorized-page-background {
-  background: url('https://www.jpl.nasa.gov/assets/images/content/tmp/home/missions_bg_image.jpg') no-repeat center center fixed;
+  background: url('/images/notauthorized-background.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 1000px;
 }
@@ -335,4 +335,12 @@ center.navbar-logo{
 .ui.middle.aligned.centered.grid.text.container.not.authorized button {
   background-color: #00b5ad;
   color:#fff;
+}
+
+/* ========================================== */
+/* Spinner Page */
+/* ========================================== */
+
+.ui.middle.aligned.centered.grid.text.container.spinner {
+  margin-top: 150px;
 }
