@@ -2,12 +2,12 @@
 
   <div class="card">
     <div class="content">
-      <div class="right floated meta">{{ activities.hours }}</div>
+      <div class="right floated meta">{{ activity.hours }}</div>
       <div class="header">
-        {{ activities.title }}
+        {{ activity.title }}
       </div>
       <div class="ui slide masked reveal image">
-        <img class="visible content" src="{{ activities.picture }}">
+        <img class="visible content" src="{{ activity.picture }}">
         <div class="hidden content">
           <div style="padding-top:115px" class="ui center aligned container">
             <button class="ui icon button">
@@ -23,9 +23,9 @@
       <div class="content">
     <span class="right floated">
       <i class="heart outline like icon"></i>
-      {{ activities.rating }}
+      {{ activity.rating }}
     </span>
-        {{ activities.cost }}
+        {{ activity.cost }}
       </div>
     </div>
   </div>
