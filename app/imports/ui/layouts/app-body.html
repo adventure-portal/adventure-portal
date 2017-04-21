@@ -1,5 +1,8 @@
+<!-- This template used for all pages except header -->
 <template name="App_Body">
-  {{> Header}}
-  {{>Template.dynamic template=main}}
-  {{> Footer}}
+  {{#If_Authorized}}
+    {{> Header}}
+    {{>Template.dynamic template=main}}
+    {{> Footer}}
+  {{/If_Authorized}}
 </template>
