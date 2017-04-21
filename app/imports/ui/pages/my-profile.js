@@ -5,32 +5,13 @@ import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
 import './my-profile.html';
 
-const displaySuccessMessage = 'displaySuccessMessage';
-const displayErrorMessages = 'displayErrorMessages';
 
 Template.My_Profile_Page.onCreated(function onCreated() {
   this.subscribe(Users.getPublicationName());
-  this.messageFlags = new ReactiveDict();
-  this.messageFlags.set(displaySuccessMessage, false);
-  this.messageFlags.set(displayErrorMessages, false);
   this.context = Users.getSchema().namedContext('My_Profile_Page');
 });
 
 Template.My_Profile_Page.helpers({
-  successClass() {
-    return Template.instance().messageFlags.get(displaySuccessMessage) ? 'success' : '';
-  },
-  displaySuccessMessage() {
-    return Template.instance().messageFlags.get(displaySuccessMessage);
-  },
-  errorClass() {
-    return Template.instance().messageFlags.get(displayErrorMessages) ? 'error' : '';
-  },
-  fieldError(fieldName) {
-    const invalidKeys = Template.instance().context.invalidKeys();
-    const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
-    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
-  },
   profile() {
     return Users.findDoc(FlowRouter.getParam('username'));
   },
@@ -44,6 +25,7 @@ Template.My_Profile_Page.helpers({
   },
   name() {
     const userProfile = Users.findDoc(FlowRouter.getParam('username'));
+    console.log(userProfile);
     return `${userProfile.firstName} ${userProfile.lastName}`;
   },
   interests() {

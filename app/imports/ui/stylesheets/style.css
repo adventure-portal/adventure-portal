@@ -344,3 +344,10 @@ center.navbar-logo{
 .ui.middle.aligned.centered.grid.text.container.spinner {
   margin-top: 150px;
 }
+/* ========================================== */
+/* Edit Profile Page */
+/* ========================================== */
+
+.ui.text.container.segment.edit.profile {
+  margin-top: 100px;
+}
