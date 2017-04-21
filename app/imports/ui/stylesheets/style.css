@@ -93,7 +93,7 @@ center.navbar-logo{
 
 .home-page-div1-background {
   background-color: #282C35;
-  height: 250px;
+  height: 475px;
   color: #18bc9c;
 }
 
@@ -109,49 +109,46 @@ center.navbar-logo{
 
 .home-page-div2-background {
   background-color: #F3F3F3;
-  height:225px;
+  height:410px;
 }
 
 .home-page-div2-background .ui.header {
   font-size:25px;
   color:#33373D;
-  margin-top:80px;
 }
 .home-page-div2-background .ui.header .sub.header {
   font-size:18px;
 }
 
 .home-page-div3-background {
-  background-color: #F3F3F3;
-  height:425px;
+  background-color: #282C35;
+  height:900px;
 }
 
 .home-page-div3-background .ui.header {
   font-size:25px;
-  color:#33373D;
-  margin-top:20px;
+  color:#18bc9c;
 }
 .home-page-div3-background .ui.header .sub.header {
   font-size:18px;
+  color: #F3F3F3;
 }
+
 /* WHITE BACKGROUND #F3F3F3
    OVERLAY BACKGROUDN WHITE #ffffff
  */
-.home-page-div4-background {
-  background-color: #F3F3F3;
-  height:155px;
-  color:#33373D;
+
+.home-page-div-divider {
+  background: url('http://www.publicdomainpictures.net/pictures/150000/velka/tropical-beach-1454007190ZAK.jpg') no-repeat center center fixed;
+  height:200px;
+
 }
 
-.home-page-div4-background .ui.header {
-  font-size:25px;
-  color:#33373D;
-  margin-top:0px;
+.home-page-div-divider .ui.main.header {
+  margin-top:75px;
+  color: #F3F3F3;
+  font-size:35px;
 }
-.home-page-div4-background .ui.header .sub.header {
-  font-size:18px;
-}
-
 
 /* ========================================== */
 /* Footer */
@@ -424,3 +421,4 @@ center.navbar-logo{
   src: local('Tangerine'), url(https://fonts.gstatic.com/s/tangerine/v7/HGfsyCL5WASpHOFnouG-RFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
+
