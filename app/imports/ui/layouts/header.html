@@ -87,7 +87,7 @@
       <a class="{{ isActiveRoute 'My_Profile_Page'}} item" href="{{ pathFor 'My_Profile_Page' username=routeUserName}}"><i
             class="user icon"></i>My Profile</a>
       <!-- Put login/logout button on very right of content-->
-      <div class="item">{{> Cas_Login }}</div>
+      <div class="item login-buttons">{{> Cas_Login }}</div>
       {{else}}
       <!-- Put login/logout button on right with no content -->
       <div class="right aligned item">{{> Cas_Login }}</div>

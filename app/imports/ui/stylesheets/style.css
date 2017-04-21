@@ -31,6 +31,17 @@ body {
   color: #18bc9c !important;
 }
 
+.ui.inverted.menu .active.login-buttons:hover {
+  color: #18bc9c !important;
+}
+
+a.cas-logout:hover {
+  color: #18bc9c !important;
+}
+
+.ui.inverted.menu a.item:hover {
+  color: #18bc9c !important;
+}
 /* ========================================== */
 /* LANDING PAGE Top navigation bar */
 /* ========================================== */
@@ -344,3 +355,4 @@ center.navbar-logo{
 .ui.middle.aligned.centered.grid.text.container.spinner {
   margin-top: 150px;
 }
+
