@@ -22,7 +22,7 @@ class UsersCollection extends BaseCollection {
       email: { type: String, optional: true },
       bio: { type: String, optional: true },
       interests: { type: [String], optional: true },
-      currentActivities: { type: [String], optional: true },
+      pinnedActivities: { type: [String], optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
     }));
   }
@@ -36,7 +36,7 @@ class UsersCollection extends BaseCollection {
    *                email: 'jdoe@example.com',
    *                bio: 'Born and raised on Oahu. Love hiking and surfing.',
    *                interests: ['Surfing', 'Hiking', 'Camping'],
-   *                currentActivities: ['Kuliouou Ridge Trail', 'Diamond Head Hike', 'Surfing at White Plains'],
+   *                pinnedActivities: ['Kuliouou Ridge Trail', 'Diamond Head Hike', 'Surfing at White Plains'],
    *                picture: 'http://johndoe.com/profile.png'});
    * @param { Object } description Object with required key username.
    * The rest of the keys are optional.
@@ -45,7 +45,7 @@ class UsersCollection extends BaseCollection {
    * @throws { Meteor.Error } If a user with the supplied username already exists.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, email = '', bio = '', interests, currentActivities,
+  define({ firstName = '', lastName = '', username, email = '', bio = '', interests, pinnedActivities,
       picture = '' }) {
     const checkPattern = {
       firstName: String,
@@ -61,7 +61,7 @@ class UsersCollection extends BaseCollection {
       throw new Meteor.Error(`${username} is previously defined.`);
     }
     return this._collection.insert({ firstName, lastName, username, email, bio, interests,
-      currentActivities, picture });
+      pinnedActivities, picture });
   }
 
   /**
@@ -77,9 +77,9 @@ class UsersCollection extends BaseCollection {
     const email = doc.email;
     const bio = doc.bio;
     const interests = doc.interests;
-    const currentActivities = doc.currentActivities;
+    const pinnedActivities = doc.pinnedActivities;
     const picture = doc.picture;
-    return { firstName, lastName, username, email, bio, interests, currentActivities, picture };
+    return { firstName, lastName, username, email, bio, interests, pinnedActivities, picture };
   }
 }
 
