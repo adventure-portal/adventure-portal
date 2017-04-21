@@ -22,13 +22,6 @@ FlowRouter.route('/:username/profile', {
   },
 });
 
-// FlowRouter.route('/:username/edit-profile', {
-//   name: 'Edit_My_Profile_Page',
-//   action() {
-//     BlazeLayout.render('App_Body', { main: 'Edit_My_Profile_Page' });
-//   },
-// });
-
 FlowRouter.route('/:username/adventures', {
   name: 'Adventures_Page',
   action() {
