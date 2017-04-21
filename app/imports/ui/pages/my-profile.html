@@ -5,27 +5,32 @@
       <div class="ui items">
         <div class="item">
           <div class="image">
+            <!--Pull from user's image, if there is no image, use a default profile image-->
             <img
                 src="https://raw.githubusercontent.com/dylannakahodo/dylannakahodo.github.io/master/images/sq_profile.jpg">
           </div>
           <div class="content">
-            <i class="ui right floated big edit icon"></i>
+            <!--Edit Profile Icon should link to edit profile page-->
+            <a href=""><i class="ui right floated big edit icon"></i></a>
             <div class="ui list">
+              <!--Currently prints undefined due to empty name field-->
               <h2>{{ name }}</h2>
               <div class="item"><i class="user icon"></i>
-                <div class="content">@dylankhn</div>
+                <div class="content">@{{ username }}</div>
               </div>
               <div class="item"><i class="mail icon"></i>
-                <div class="content">dylankhn@hawaii.edu</div>
+                <div class="content">{{ username }}@hawaii.edu</div>
               </div>
               <strong>Interests: </strong>
               <div class="item">
+                <!--Fix to pull from user's interests-->
                 <span class="ui red tag label">Hiking</span>
                 <span class="ui red tag label">Surfing</span>
                 <span class="ui red tag label">Paddling</span></div>
             </div>
           </div>
         </div>
+        <!--Fix to pull from user's bio-->
         <div class="item">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
@@ -46,7 +51,7 @@
         <div class="sub header">All of your favorite adventures in one place.</div>
       </div>
     </h2>
-
+<!--Should pull from user's favorite adventures somehow-->
     <div class="ui container adventure display">
       <div class="ui fluid three stackable cards">
         <div class="ui card">
