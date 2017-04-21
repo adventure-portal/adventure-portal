@@ -5,7 +5,7 @@ Template.Adventures_Page.onCreated(function onCreated() {
   this.subscribe(Activities.getPublicationName());
 });
 
-Template.Directory_Page.helpers({
+Template.Adventures_Page.helpers({
 
   /**
    * Returns a cursor to profiles, sorted by last name.

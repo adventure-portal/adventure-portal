@@ -2,6 +2,8 @@ import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
 import { Activities } from '/imports/api/activities/ActivitiesCollection';
+import './dashboard-page.html';
+//import './activities-card.html';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
@@ -20,6 +22,6 @@ Template.Dashboard_Page.helpers({
    * Returns a cursor to profiles, sorted by last name.
    */
   activities() {
-    return Activities.find({}, { sort: { title: 1 } });
+    return Activities.find({}, { sort: { title: 0 } });
   },
 });
