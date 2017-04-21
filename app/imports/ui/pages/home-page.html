@@ -11,7 +11,13 @@
         <img class="ui centered image" src="/images/landing-connect.png">
       </div>
       <div class="column">
-        <h1 style="padding-top: 75px" class="ui main header">A better way to explore</h1>
+        <!-- START RIPPLE, DIVS ARE NECESSARY -->
+        <div class='uil-ripple-css' style='transform:scale(0.53);'>
+          <div></div>
+          <div></div>
+        </div>
+        <!-- END RIPPLE -->
+        <h1 style="margin-top: -10px" class="ui main header">A better way to explore</h1>
         <h3 style="color: #F3F3F3; font-size: 18px" class="ui secondary header">The portal for organizing amazing
           adventures and connecting shared interests
           with the right people</h3>
@@ -24,8 +30,10 @@
   </div>
   <!-- INFO -->
   <div class="home-page-div2-background">
-    <div style="padding-top: 100px" class="ui center aligned container">
-      <h3 class="ui secondary header">
+    <div style="padding-top: 50px" class="ui center aligned container">
+      <img src="/images/balls.gif">
+      <div style="background:url(balls.gif) no-repeat center center;width:32px;height:32px;"></div>
+      <h3 style="margin-top: 0px" class="ui secondary header">
         Adventure Portal is a tool to help members of the UH community
         find exciting adventures to embark on and organize activities with similar minded people.
       </h3>
@@ -35,21 +43,33 @@
     </div>
   </div>
 
+  <!-- Picture -->
   <div class="home-page-div-divider">
     <div class="ui middle aligned centered grid text container">
       <h1 class="ui main header">Join for free</h1>
     </div>
   </div>
 
-  <!-- PROFILE -->
-  <div style="padding-top: 100px" class="home-page-div3-background">
-    <div class="ui left aligned grid container">
-      <h3 class="ui header">
-        Profile
-        <div class="sub header">Create your profile, add interests, and explore activites</div>
-      </h3>
+  <!-- Bottom stuff -->
+  <div class="home-page-div3-background">
+    <!-- Profile -->
+    <div style="padding-top: 100px" class="ui two column grid container">
+      <div class="column">
+        <h3 class="ui header">
+          Profile
+          <div class="sub header">Create your profile, add interests, and explore activites</div>
+        </h3>
+      </div>
+      <div style="margin-top: -65px" class="column">
+        <!-- START POI, DIVS ARE NECESSARY -->
+        <div class='uil-poi-css' style='transform:scale(0.99);'>
+          <div></div>
+        </div>
+        <!-- END POI -->
+      </div>
     </div>
-    <div style="padding-top: 100px" class="ui left aligned grid container">
+    <!-- Adventures -->
+    <div style="padding-top: 60px" class="ui left aligned grid container">
       <h3 class="ui header">
         Adventures
         <div class="sub header">Explore trending adventures, secret getaways, and perfect hangout spots</div>
@@ -73,15 +93,25 @@
         </div>
       </div>
     </div>
-
-
-    <div style="padding-top: 100px" class="ui left aligned grid container">
-      <h3 class="ui header">
-        Quick Searches
-        <div class="sub header">Discover exciting new adventures based on your interests</div>
-      </h3>
+    <!-- Quick searches -->
+    <div style="padding-top: 100px" class="ui two column grid container">
+      <div class="column">
+        <h3 class="ui header">
+          Quick Searches
+          <div class="sub header">Discover exciting new adventures based on your interests</div>
+        </h3>
+      </div>
+      <div style="margin-top: -65px" class="column">
+        <!-- START MAGNIFY, DIVS ARE NECESSARY -->
+        <div class='uil-magnify-css' style='transform:scale(0.7);'>
+          <div class="group">
+            <div class="grip"></div>
+            <div class="inner-circle"></div>
+            <div class="outer-circle"></div>
+          </div>
+        </div>
+        <!-- END MAGNIFY -->
+      </div>
     </div>
   </div>
-
-
 </template>
