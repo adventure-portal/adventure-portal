@@ -250,7 +250,7 @@
   background: none;
   position: relative;
   width: 200px;
-  height: 200px
+  height: 200px;
 }
 
 .uil-magnify-css .outer-circle {
@@ -259,8 +259,8 @@
   height: 110px;
   top: 30px;
   left: 30px;
-  border: 15px solid #fafafa;
-  border-radius: 60px
+  border: 15px solid #070d17;
+  border-radius: 60px;
 }
 
 .uil-magnify-css .inner-circle {
@@ -269,8 +269,8 @@
   height: 80px;
   top: 45px;
   left: 45px;
-  background: #4e6c9e;
-  border-radius: 30px
+  background: #ffffff;
+  border-radius: 30px;
 }
 
 .uil-magnify-css .grip {
@@ -280,12 +280,12 @@
   top: 100px;
   left: 118px;
   border-radius: 20px;
-  background: #fafafa;
+  background: #070d17;
   -ms-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 
 .uil-magnify-css .group {
@@ -293,5 +293,5 @@
   -moz-animation: uil-magnify-move 2.5s linear infinite;
   -webkit-animation: uil-magnify-move 2.5s linear infinite;
   -o-animation: uil-magnify-move 2.5s linear infinite;
-  animation: uil-magnify-move 2.5s linear infinite
-} 
+  animation: uil-magnify-move 2.5s linear infinite;
+}

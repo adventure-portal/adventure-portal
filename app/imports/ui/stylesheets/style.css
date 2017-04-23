@@ -139,9 +139,12 @@ center.navbar-logo{
  */
 
 .home-page-div-divider {
-  background: url('http://www.publicdomainpictures.net/pictures/150000/velka/tropical-beach-1454007190ZAK.jpg') no-repeat center center fixed;
+  background: url('/images/background-beach-landing.jpg') no-repeat center center fixed;
   height:200px;
+}
 
+.home-page-div-divider .ui.middle.aligned.centered.grid.text.container .ui.main.header {
+  color: #f3f3f3;
 }
 
 .home-page-div-divider .ui.main.header {
