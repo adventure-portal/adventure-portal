@@ -1,9 +1,8 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Activities } from '/imports/api/activity/ActivityCollection';
+import { Activities } from '/imports/api/activities/ActivitiesCollection';
 import './dashboard-page.html';
-// import './activities-card.html';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 

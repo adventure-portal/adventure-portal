@@ -1,5 +1,4 @@
-import { Activities } from '../../api/activity/ActivityCollection.js';
-import { _ } from 'meteor/underscore';
+import { Activities } from '../../api/activities/ActivitiesCollection.js';
 
 /**
  * A list of Contacts to pre-fill the Collection.

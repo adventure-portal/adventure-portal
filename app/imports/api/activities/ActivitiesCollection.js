@@ -10,13 +10,13 @@ import { _ } from 'meteor/underscore';
  * Represents a specific interest, such as "Software Engineering".
  * @extends module:Base~BaseCollection
  */
-class ActivityCollection extends BaseCollection {
+class ActivitiesCollection extends BaseCollection {
 
   /**
-   * Creates the Activity collection.
+   * Creates the Activities collection.
    */
   constructor() {
-    super('Activity', new SimpleSchema({
+    super('Activities', new SimpleSchema({
       title: { type: String },
       location: { type: String, optional: true },
       hours: { type: String, optional: true },
@@ -87,4 +87,4 @@ class ActivityCollection extends BaseCollection {
 /**
  * Provides the singleton instance of this class to all other entities.
  */
-export const Activities = new ActivityCollection();
+export const Activities = new ActivitiesCollection();

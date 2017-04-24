@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Users } from '/imports/api/users/UsersCollection';
-import { Activities } from '/imports/api/activity/ActivityCollection';
+import { Activities } from '/imports/api/activities/ActivitiesCollection';
 import { _ } from 'meteor/underscore';
 
 /* global Assets */
