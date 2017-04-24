@@ -1,4 +1,4 @@
-import { Activities } from '/imports/api/activities/ActivitiesCollection';
+import { Activities } from '/imports/api/activity/ActivityCollection';
 import { Users } from '/imports/api/users/UsersCollection';
 
 
