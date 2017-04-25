@@ -39,43 +39,35 @@ Template.Edit_My_Profile_Page.helpers({
   },
 });
 
-/*
-  Need to link up
- */
-// Template.Edit_My_Profile_Page.events({
-//   'submit .profile-data-form'(event, instance) {
-//     event.preventDefault();
-//     const firstName = event.target.First.value;
-//     const lastName = event.target.Last.value;
-//     const title = event.target.Title.value;
-//     const username = FlowRouter.getParam('username'); // schema requires username.
-//     const picture = event.target.Picture.value;
-//     const github = event.target.Github.value;
-//     const facebook = event.target.Facebook.value;
-//     const instagram = event.target.Instagram.value;
-//     const bio = event.target.Bio.value;
-//     const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
-//     const interests = _.map(selectedInterests, (option) => option.value);
-//
-//     const updatedProfileData = { firstName, lastName, title, picture, github, facebook, instagram, bio, interests,
-//       username };
-//
-//     // Clear out any old validation errors.
-//     instance.context.resetValidation();
-//     // Invoke clean so that updatedProfileData reflects what will be inserted.
-//     Profiles.getSchema().clean(updatedProfileData);
-//     // Determine validity.
-//     instance.context.validate(updatedProfileData);
-//
-//     if (instance.context.isValid()) {
-//       const docID = Profiles.findDoc(FlowRouter.getParam('username'))._id;
-//       const id = Profiles.update(docID, { $set: updatedProfileData });
-//       instance.messageFlags.set(displaySuccessMessage, id);
-//       instance.messageFlags.set(displayErrorMessages, false);
-//     } else {
-//       instance.messageFlags.set(displaySuccessMessage, false);
-//       instance.messageFlags.set(displayErrorMessages, true);
-//     }
-//   },
-// });
+Template.Edit_My_Profile_Page.events({
+  'submit .profile-data-form'(event, instance) {
+    event.preventDefault();
+    const firstName = event.target.First.value;
+    const lastName = event.target.Last.value;
+    const username = FlowRouter.getParam('username'); // schema requires username.
+    const picture = event.target.Picture.value;
+    const bio = event.target.Bio.value;
+    const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
+    const interests = _.map(selectedInterests, (option) => option.value);
+
+    const updatedProfileData = { firstName, lastName, picture, bio, interests, username };
+
+    // Clear out any old validation errors.
+    instance.context.resetValidation();
+    // Invoke clean so that updatedProfileData reflects what will be inserted.
+    Users.getSchema().clean(updatedProfileData);
+    // Determine validity.
+    instance.context.validate(updatedProfileData);
+
+    if (instance.context.isValid()) {
+      const docID = Users.findDoc(FlowRouter.getParam('username'))._id;
+      const id = Users.update(docID, { $set: updatedProfileData });
+      instance.messageFlags.set(displaySuccessMessage, id);
+      instance.messageFlags.set(displayErrorMessages, false);
+    } else {
+      instance.messageFlags.set(displaySuccessMessage, false);
+      instance.messageFlags.set(displayErrorMessages, true);
+    }
+  },
+});
 

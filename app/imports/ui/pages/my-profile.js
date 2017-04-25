@@ -5,7 +5,6 @@ import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
 import './my-profile.html';
 
-
 Template.My_Profile_Page.onCreated(function onCreated() {
   this.subscribe(Users.getPublicationName());
   this.context = Users.getSchema().namedContext('My_Profile_Page');
@@ -22,11 +21,6 @@ Template.My_Profile_Page.helpers({
             function makeInterestObject(activity) {
               return { label: activity.name, selected: _.contains(pinnedActivities, Activity.name) };
             });
-  },
-  name() {
-    const userProfile = Users.findDoc(FlowRouter.getParam('username'));
-    console.log(userProfile);
-    return `${userProfile.firstName} ${userProfile.lastName}`;
   },
   interests() {
     const profile = Profiles.findDoc(FlowRouter.getParam('username'));
