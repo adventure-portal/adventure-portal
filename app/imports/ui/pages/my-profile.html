@@ -5,9 +5,13 @@
       <div class="ui items">
         <div class="item">
           <div class="image">
-            <!--Pull from user's image, if there is no image, use a default profile image-->
+            {{#if profile.picture}}
             <img
-                src="https://raw.githubusercontent.com/dylannakahodo/dylannakahodo.github.io/master/images/sq_profile.jpg">
+                src={{profile.picture}}>
+            {{else}}
+            <img
+                src="/images/profile_default.jpg">
+            {{/if}}
           </div>
           <div class="content">
             <a href="edit-my-profile-page"><i class="ui right floated big edit icon"></i></a>
