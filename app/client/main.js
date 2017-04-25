@@ -11,6 +11,6 @@ import '/imports/ui/stylesheets/magnify.css';
 import '/imports/ui/stylesheets/poi.css';
 import '/imports/ui/components/authentication';
 import '/imports/ui/components/form-controls';
-import '/imports/ui/components/activities-card';
+import '/imports/ui/components/activity-card';
 import '/imports/ui/javascript/jquery.min.js';
 import '/imports/ui/javascript/navbar-slider.js';

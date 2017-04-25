@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Users } from '/imports/api/users/UsersCollection';
-import { Activities } from '/imports/api/activities/ActivitiesCollection';
+import { Activity } from '/imports/api/activities/ActivitiesCollection';
 import { _ } from 'meteor/underscore';
 
 /* global Assets */
@@ -12,7 +12,7 @@ import { _ } from 'meteor/underscore';
  * @param restoreJSON The restore file contents.
  * @param collection The collection of interest.
  */
-    function getDefinitions(restoreJSON, collection) {
+function getDefinitions(restoreJSON, collection) {
   return _.find(restoreJSON.collections, obj => obj.name === collection).contents;
 }
 
@@ -29,16 +29,16 @@ function restoreCollection(collection, restoreJSON) {
 
 Meteor.startup(() => {
   /** Only initialize database if it's empty. */
-  const collectionList = [Activities, Users];
-const totalDocuments = _.reduce(collectionList, function reducer(memo, collection) {
-  return memo + collection.count();
-}, 0);
-if (totalDocuments === 0) {
-  const fileName = Meteor.settings.public.initialDatabaseFileName;
-  console.log(`Restoring database from file ${fileName}.`);
-  const restoreJSON = JSON.parse(Assets.getText(fileName));
-  _.each(collectionList, collection => {
-    restoreCollection(collection, restoreJSON);
-});
-}
+  const collectionList = [Activity, Users];
+  const totalDocuments = _.reduce(collectionList, function reducer(memo, collection) {
+    return memo + collection.count();
+    }, 0);
+  if (totalDocuments === 0) {
+    const fileName = Meteor.settings.public.initialDatabaseFileName;
+    console.log(`Restoring database from file ${fileName}.`);
+    const restoreJSON = JSON.parse(Assets.getText(fileName));
+    _.each(collectionList, collection => {
+      restoreCollection(collection, restoreJSON);
+    });
+  }
 });

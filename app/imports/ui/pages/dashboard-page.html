@@ -1,5 +1,5 @@
 <template name="Dashboard_Page">
-  {{#If_Logged_In}}
+
     <div style="padding-top: 81px" class="ui container">
       <h3 class="ui center aligned icon header">
         <i class="map pin icon"></i>
@@ -11,8 +11,8 @@
 
       <div class="ui cards">
 
-        {{#each activity in activities }}
-          {{> Activities_Card activity=activity }}
+        {{#each activities in activity }}
+           {{> Activity_Card activities=activities }}
         {{/each}}
 
       </div>
@@ -31,12 +31,11 @@
 
       <div class="ui cards">
 
-        {{#each activities in activities }}
-          {{> Activities_Card activities=activities }}
+        {{#each activities in activity }}
+          {{> Activity_Card activities=activities }}
         {{/each}}
 
       </div>
     </div>
     <div class="ui section divider"></div>
-  {{/If_Logged_In}}
 </template>

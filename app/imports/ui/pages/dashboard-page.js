@@ -1,8 +1,8 @@
-import { AutoForm } from 'meteor/aldeed:autoform';
-import { FlowRouter } from 'meteor/kadira:flow-router';
+// import { AutoForm } from 'meteor/aldeed:autoform';
+// import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Activities } from '/imports/api/activities/ActivitiesCollection';
-import './dashboard-page.html';
+import { Activity } from '/imports/api/activities/ActivitiesCollection';
+//  import './dashboard-page.html';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
@@ -12,7 +12,7 @@ import './dashboard-page.html';
  */
 
 Template.Dashboard_Page.onCreated(function onCreated() {
-  this.subscribe(Activities.getPublicationName());
+  this.subscribe(Activity.getPublicationName());
 });
 
 Template.Dashboard_Page.helpers({
@@ -20,7 +20,10 @@ Template.Dashboard_Page.helpers({
   /**
    * Returns a cursor to profiles, sorted by last name.
    */
-  activities() {
-    return Activities.find({}, { sort: { title: 1 } });
+  activity() {
+    console.log(Activity.find().fetch());
+    return Activity.find({}, { sort: { title: 1 } });
   },
+
+
 });

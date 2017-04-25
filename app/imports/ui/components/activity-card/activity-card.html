@@ -1,13 +1,13 @@
-<template name="Activities_Card">
+<template name="Activity_Card">
 
   <div class="card">
     <div class="content">
-      <div class="right floated meta">{{ activity.hours }}</div>
+      <div class="right floated meta">{{ activities.hours }}</div>
       <div class="header">
-        {{ activity.title }}
+        {{ activities.title }}
       </div>
       <div class="ui slide masked reveal image">
-        <img class="visible content" src="{{ activity.picture }}">
+        <img class="visible content" src="{{ activities.picture }}">
         <div class="hidden content">
           <div style="padding-top:115px" class="ui center aligned container">
             <button class="ui icon button">
@@ -23,9 +23,9 @@
       <div class="content">
     <span class="right floated">
       <i class="heart outline like icon"></i>
-      {{ activity.rating }}
+      {{ activities.rating }}
     </span>
-        {{ activity.cost }}
+        {{ activities.cost }}
       </div>
     </div>
   </div>

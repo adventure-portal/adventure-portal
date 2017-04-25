@@ -22,7 +22,7 @@ class ActivitiesCollection extends BaseCollection {
       hours: { type: String, optional: true },
       cost: { type: String, optional: true },
       rating: { type: String, optional: true },
-      interests: { type: [String], optional: true },
+      interests: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       description: { type: String, optional: true },
     }));
@@ -54,6 +54,7 @@ class ActivitiesCollection extends BaseCollection {
       hours: String,
       cost: String,
       rating: String,
+      interests: String,
       picture: String,
       description: String,
     };
@@ -62,7 +63,7 @@ class ActivitiesCollection extends BaseCollection {
     if (this.find({ title }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined.`);
     }
-    return this._collection.insert({ title, location, hours, cost, rating, picture, description });
+    return this._collection.insert({ title, location, hours, cost, rating, interests, picture, description });
   }
 
   /**
@@ -87,4 +88,4 @@ class ActivitiesCollection extends BaseCollection {
 /**
  * Provides the singleton instance of this class to all other entities.
  */
-export const Activities = new ActivitiesCollection();
+export const Activity = new ActivitiesCollection();

@@ -1,6 +1,6 @@
-import { Activities } from '/imports/api/activities/ActivitiesCollection';
+import { Activity } from '/imports/api/activities/ActivitiesCollection';
 import { Users } from '/imports/api/users/UsersCollection';
 
 
-Activities.publish();
+Activity.publish();
 Users.publish();
