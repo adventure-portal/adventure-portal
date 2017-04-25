@@ -1,4 +1,5 @@
 import './home-page.html';
+import './home-page.js';
 
 import './login-page.html';
 import './login-page.js';

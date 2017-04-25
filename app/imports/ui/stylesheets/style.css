@@ -4,7 +4,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
 /* ========================================== */
 /* NOT LANDING PAGE Top navigation bar  */
 /* ========================================== */
@@ -84,11 +83,13 @@ center.navbar-logo{
   font-size: 55px;
   margin-top: 275px;
   color: #fff;
+  font-weight: normal;
 }
 
 .home-page-main-background .ui.secondary.header {
   font-size: 25px;
   color: #fff;
+  font-weight: normal;
 }
 
 .home-page-div1-background {
@@ -101,10 +102,12 @@ center.navbar-logo{
   margin-top: 50px;
   font-size:35px;
   color: #18bc9c;
+  font-weight: normal;
 }
 .home-page-div1-background .ui.secondary.header {
   font-size: 20px;
   color: #18bc9c;
+  font-weight: normal;
 }
 
 .home-page-div2-background {
@@ -115,9 +118,11 @@ center.navbar-logo{
 .home-page-div2-background .ui.header {
   font-size:25px;
   color:#33373D;
+  font-weight: normal;
 }
 .home-page-div2-background .ui.header .sub.header {
   font-size:18px;
+  font-weight: normal;
 }
 
 .home-page-div3-background {
@@ -128,10 +133,12 @@ center.navbar-logo{
 .home-page-div3-background .ui.header {
   font-size:25px;
   color:#18bc9c;
+  font-weight: normal;
 }
 .home-page-div3-background .ui.header .sub.header {
   font-size:18px;
   color: #F3F3F3;
+  font-weight: normal;
 }
 
 /* WHITE BACKGROUND #F3F3F3
@@ -143,14 +150,26 @@ center.navbar-logo{
   height:200px;
 }
 
-.home-page-div-divider .ui.middle.aligned.centered.grid.text.container .ui.main.header {
+.home-page-div-divider .ui.middle.aligned.centered.grid.container .ui.main.header {
   color: #f3f3f3;
+  font-weight: normal;
 }
+
+.home-page-div-divider .ui.middle.aligned.centered.grid.text.container .ui.huge.button.login {
+  background-color: #00b5ad;
+  color: #fff;
+}
+.home-page-div-divider .ui.middle.aligned.centered.grid.text.container .ui.huge.button.logout {
+  background-color: #00b5ad;
+  color: #fff;
+}
+
 
 .home-page-div-divider .ui.main.header {
   margin-top:75px;
   color: #F3F3F3;
   font-size:35px;
+  font-weight: normal;
 }
 
 /* ========================================== */
@@ -160,6 +179,7 @@ center.navbar-logo{
   color: #fff;
   background-color: #282C35;
   padding-bottom: 15px;
+  font-weight: normal;
 }
 
 /* ========================================== */
@@ -293,6 +313,7 @@ center.navbar-logo{
   font-size:35px;
   color: #18bc9c;
   padding-bottom:20px;
+  font-weight: normal;
 }
 
 .ui.middle.aligned.centered.grid.text.container.teleport button {
@@ -308,6 +329,7 @@ center.navbar-logo{
   background: url('/images/unauthorized.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 750px;
+  font-weight: normal;
   /*
   ALTERNATE SIMPLE VERSION
 
@@ -320,10 +342,12 @@ center.navbar-logo{
   margin-top: 300px;
   font-size:35px;
   color: #fff;
+  font-weight: normal;
 }
 .not-loggedin-background .ui.secondary.header {
   font-size: 20px;
   color: #18bc9c;
+  font-weight: normal;
 }
 
 /* ========================================== */
@@ -341,6 +365,7 @@ center.navbar-logo{
   font-size:35px;
   color: #18bc9c;
   padding-bottom:20px;
+  font-weight: normal;
 }
 
 .ui.middle.aligned.centered.grid.text.container.not.authorized button {
