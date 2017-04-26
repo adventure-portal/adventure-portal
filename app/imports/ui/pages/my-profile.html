@@ -26,10 +26,13 @@
               </div>
               <strong>Interests: </strong>
               <div class="item">
-                <!--Fix to pull from user's interests-->
+                {{#if profile.interests}}
                 {{#each interest in profile.interests}}
                 <div class="ui green tag small label">{{interest}}</div>
                 {{/each}}
+                {{else}}
+                <div class="ui red tag small label">None</div>
+                {{/if}}
               </div>
             </div>
             <div class="item">
