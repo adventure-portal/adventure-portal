@@ -17,7 +17,7 @@
             <!--This edit icon should only show up if the current logged in user is viewing their own profile page.-->
             <a href="edit-my-profile-page"><i class="ui right floated big edit icon"></i></a>
             <div class="ui list">
-              <h2>{{ profile.firstName }} {{profile.lastName}}</h2>
+              <div class="ui large header">{{ profile.firstName }} {{profile.lastName}}</div>
               <div class="item"><i class="user icon"></i>
                 <div class="content">{{ profile.username }}</div>
               </div>
@@ -27,14 +27,15 @@
               <strong>Interests: </strong>
               <div class="item">
                 <!--Fix to pull from user's interests-->
-                <span class="ui red tag label">Hiking</span>
-                <span class="ui red tag label">Surfing</span>
-                <span class="ui red tag label">Paddling</span></div>
+                {{#each interest in profile.interests}}
+                <div class="ui green tag small label">{{interest}}</div>
+                {{/each}}
+              </div>
+            </div>
+            <div class="item">
+              {{ profile.bio }}
             </div>
           </div>
-        </div>
-        <div class="item">
-          {{ profile.bio }}
         </div>
       </div>
     </div>
