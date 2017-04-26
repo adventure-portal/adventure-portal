@@ -1,29 +1,27 @@
-
-/*
 {
   "comment": "Initial contents for the Adventure Portal database. For development purposes only.",
   "collections": [
     {
-      "name": "InterestCollection",
+      "name": "InterestsCollection",
       "contents": [
         {
-          "name": "Software Engineering",
-          "description": "Techniques for development of high quality systems"
+          "name": "Hiking",
+          "description": ""
         },
         {
-          "name": "Algorithms",
-          "description": "A set of rules to be followed in computation"
+          "name": "Surfing",
+          "description": ""
         },
         {
-          "name": "Mobile Networks",
-          "description": "Networks created using mobile devices."
+          "name": "Fishing",
+          "description": ""
         },
         {
           "name": "Sailing",
           "description": ""
         },
         {
-          "name": "Mars",
+          "name": "Swimming",
           "description": ""
         },
         {
@@ -31,7 +29,7 @@
           "description": ""
         },
         {
-          "name": "Photography",
+          "name": "Running",
           "description": ""
         },
         {
@@ -39,7 +37,7 @@
           "description": ""
         },
         {
-          "name": "Psychology",
+          "name": "Biking",
           "description": ""
         },
         {
@@ -47,7 +45,7 @@
           "description": ""
         },
         {
-          "name": "Accreditation",
+          "name": "Basketball",
           "description": ""
         },
         {
@@ -59,15 +57,15 @@
           "description": ""
         },
         {
-          "name": "Cybersecurity",
+          "name": "Tennis",
           "description": ""
         },
         {
-          "name": "Surfing",
+          "name": "Baseball",
           "description": ""
         },
         {
-          "name": "Computer Vision",
+          "name": "Rock Climbing",
           "description": ""
         },
         {
@@ -75,76 +73,10 @@
           "description": ""
         },
         {
-          "name": "Evolutionary Computation",
+          "name": "Beach",
           "description": ""
-        }
-      ]
-    },
-    {
-      "name": "ProfileCollection",
-      "contents": [
-        {
-          "firstName": "Lee",
-          "lastName": "Altenberg",
-          "username": "altenber",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Evolutionary Computation"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/altenberg.jpg"
-        },
-        {
-          "firstName": "Kyungim",
-          "lastName": "Baek",
-          "username": "baek",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Computer Vision"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/baek.jpg"
-        },
-        {
-          "firstName": "Edo",
-          "lastName": "Biagioni",
-          "username": "esb",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Mobile Networks",
-            "Sailing"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/biagioni.jpg"
-        },
-        {
-          "firstName": "Kim",
-          "lastName": "Binsted",
-          "username": "binsted",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Mars",
-            "Imu Cooking"
-          ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/binsted.jpg"
-        },
-        {
-          "firstName": "Henri",
-          "lastName": "Casanova",
-          "username": "henric",
-          "github": "henricasanova",
-          "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
-          "interests": [
-            "Surfing",
-            "Photography"
-          ],
-          "title": "Professor, Information and Computer Sciences",
-          "picture": "/images/casanova.jpg"
         }
       ]
     }
   ]
 }
-
-*/

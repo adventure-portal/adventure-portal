@@ -3,6 +3,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
+import { Interests } from '/imports/api/interests/InterestsCollection';
 import './my-profile.html';
 
 Template.My_Profile_Page.onCreated(function onCreated() {
@@ -23,9 +24,9 @@ Template.My_Profile_Page.helpers({
             });
   },
   interests() {
-    const profile = Profiles.findDoc(FlowRouter.getParam('username'));
-    const selectedInterests = profile.interests;
-    return profile && _.map(Interests.findAll(),
+    const userProfile = Users.findDoc(FlowRouter.getParam('username'));
+    const selectedInterests = userProfile.interests;
+    return userProfile && _.map(Interests.findAll(),
             function makeInterestObject(interest) {
               return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
             });
