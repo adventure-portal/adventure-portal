@@ -77,6 +77,45 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "ActivityCollection",
+      "contents": [
+        {
+          "title": "Manoa",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "https://i.ytimg.com/vi/7ZuguSwUiWo/maxresdefault.jpg",
+          "description": "Manoa is whats up right now"
+        },
+        {
+          "title": "Waimanalo Falls",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/manoafalls.jpg",
+          "description": "Manoa is whats up right now"
+        }, {
+          "title": "Waikiki",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/manoafalls.jpg",
+          "description": "Manoa is whats up right now"
+        }, {
+          "title": "Hawaii Kai",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/manoafalls.jpg",
+          "description": "Manoa is whats up right now"
+        }
+      ]
     }
   ]
 }
