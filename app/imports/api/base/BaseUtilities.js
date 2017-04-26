@@ -1,5 +1,5 @@
-import { Users } from '/imports/api/activity/ActivityCollection';
-import { Activities } from '/imports/api/users/UsersCollection';
+import { Users } from '/imports/api/users/UsersCollection';
+import { Activities } from '/imports/api/activity/ActivitiesCollection';
 
 export function removeAllEntities() {
   Users.removeAll();
