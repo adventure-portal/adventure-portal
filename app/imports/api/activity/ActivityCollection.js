@@ -13,91 +13,55 @@ import { _ } from 'meteor/underscore';
 class ActivityCollection extends BaseCollection {
 
   /**
-   * Creates the Activity collection.
+   * Creates the Activities collection.
    */
   constructor() {
     super('Activity', new SimpleSchema({
-      name: { type: String },
+      title: { type: String },
+      location: { type: String, optional: true },
+      hours: { type: String, optional: true },
+      cost: { type: String, optional: true },
+      rating: { type: String, optional: true },
+      picture: { type: SimpleSchema.RegEx.Url, optional: true },
       description: { type: String, optional: true },
     }));
   }
 
   /**
-   * Defines a new Activity.
+   * Defines a new activity.
    * @example
-   * Activities.define({ name: 'Software Engineering',
-   *                    description: 'Methods for group development of large, high quality software systems' });
-   * @param { Object } description Object with keys name and description.
-   * Name must be previously undefined. Description is optional.
-   * Creates a "slug" for this name and stores it in the slug field.
-   * @throws {Meteor.Error} If the Activity definition includes a defined name.
+   * Users.define({ title: 'Manoa Falls',
+   *                location: 'Manoa',
+   *                hours: '8 AM - 5 PM',
+   *                cost: '$0',
+   *                rating: '4 Stars',
+   *                picture: 'http://johndoe.com/profile.png'});
+   *                description: 'A fun hike for all ages, best during sunny days in Manoa
+   *                since the hike can become extremely muddy during the rainy season';
+   * @param { Object } description Object with required key hours.
+   * The rest of the keys are optional.
+   * Username must be unique for all users. It should be the UH cost account.
+   * Interests is an array of defined interest names.
+   * @throws { Meteor.Error } If a user with the supplied hours already exists.
    * @returns The newly created docID.
    */
-  define({ name, description }) {
-    check(name, String);
-    check(description, String);
-    if (this.find({ name }).count() > 0) {
-      throw new Meteor.Error(`${name} is previously defined in another Activity`);
+
+  define({ title, location, hours, cost, rating, picture, description }) {
+    const checkPattern = {
+      title: String,
+      location: String,
+      hours: String,
+      cost: String,
+      rating: String,
+      picture: String,
+      description: String,
+    };
+    check({ title, location, hours, cost, rating, picture, description }, checkPattern);
+
+    if (this.find({ title }).count() > 0) {
+      throw new Meteor.Error(`${name} is previously defined.`);
     }
-    return this._collection.insert({ name, description });
-  }
-
-  /**
-   * Returns the Activity name corresponding to the passed Activity docID.
-   * @param activityID An activity docID.
-   * @returns { String } An activity name.
-   * @throws { Meteor.Error} If the activity docID cannot be found.
-   */
-  findName(activityID) {
-    this.assertDefined(activityID);
-    return this.findDoc(activityID).name;
-  }
-
-  /**
-   * Returns a list of activity names corresponding to the passed list of activity docIDs.
-   * @param activityIDs A list of activity docIDs.
-   * @returns { Array }
-   * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
-   */
-  findNames(activityIDs) {
-    return activityIDs.map(activityID => this.findName(activityID));
-  }
-
-  /**
-   * Throws an error if the passed name is not a defined activity name.
-   * @param name The name of an activity.
-   */
-  assertName(name) {
-    this.findDoc(name);
-  }
-
-  /**
-   * Throws an error if the passed list of names are not all activity names.
-   * @param names An array of (hopefully) activity names.
-   */
-  assertNames(names) {
-    _.each(names, name => this.assertName(name));
-  }
-
-  /**
-   * Returns the docID associated with the passed activity name, or throws an error if it cannot be found.
-   * @param { String } name An activity name.
-   * @returns { String } The docID associated with the name.
-   * @throws { Meteor.Error } If name is not associated with an activity.
-   */
-  findID(name) {
-    return (this.findDoc(name)._id);
-  }
-
-  /**
-   * Returns the docIDs associated with the array of activity names, or throws an error if any name cannot be found.
-   * If nothing is passed, then an empty array is returned.
-   * @param { String[] } names An array of activity names.
-   * @returns { String[] } The docIDs associated with the names.
-   * @throws { Meteor.Error } If any instance is not an activity name.
-   */
-  findIDs(names) {
-    return (names) ? names.map((instance) => this.findID(instance)) : [];
+    return this._collection.insert({ title, location, hours, cost, rating, picture, description });
   }
 
   /**
@@ -107,9 +71,14 @@ class ActivityCollection extends BaseCollection {
    */
   dumpOne(docID) {
     const doc = this.findDoc(docID);
-    const name = doc.name;
+    const title = doc.title;
+    const location = doc.location;
+    const hours = doc.hours;
+    const cost = doc.cost;
+    const rating = doc.rating;
+    const picture = doc.picture;
     const description = doc.description;
-    return { name, description };
+    return { title, location, hours, cost, rating, picture, description };
   }
 }
 

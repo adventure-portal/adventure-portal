@@ -1,285 +1,43 @@
 <template name="Dashboard_Page">
-  {{#If_Logged_In}}
-    <div style="padding-top: 81px" class="ui container">
-      <h3 class="ui center aligned icon header">
-        <i class="map pin icon"></i>
-        <div class="content">
-          Recent Activity
-          <div class="sub header">Activities users have recently done in your area</div>
-        </div>
-      </h3>
-
-      <div class="ui fluid four stackable cards">
-        <div class="ui card">
-          <div class="content">
-            <div class="right floated meta">14h</div>
-            Waikiki Beach
-          </div>
-          <div class="ui slide masked reveal image">
-            <img src="/images/waikiki.jpg" class="visible content">
-            <div class="hidden content">
-              <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-                <i class="add to calendar icon"></i>
-              </button>
-              <button class="ui icon button">
-                <i class="empty star icon"></i>
-              </button></div>
-            </div>
-          </div>
-
-          <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-            <i class="comment icon"></i>
-            3 comments
-          </div>
-          <div class="extra content">
-            <div class="ui large transparent left icon input">
-              <i class="heart outline icon"></i>
-              <input type="text" placeholder="Add Comment...">
-            </div>
-          </div>
-        </div>
-        <div class="ui card">
-          <div class="content">
-            <div class="right floated meta">12h</div>
-            Manoa Falls
-          </div>
-          <div class="ui slide masked reveal image">
-            <img src="/images/manoafalls.jpg" class="visible content">
-            <div class="hidden content">
-              <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-                <i class="add to calendar icon"></i>
-              </button>
-                <button class="ui icon button">
-                  <i class="empty star icon"></i>
-                </button></div>
-            </div>
-          </div>
-
-          <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-            <i class="comment icon"></i>
-            3 comments
-          </div>
-          <div class="extra content">
-            <div class="ui large transparent left icon input">
-              <i class="heart outline icon"></i>
-              <input type="text" placeholder="Add Comment...">
-            </div>
-          </div>
-        </div>        <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-         St. Louis Heights
-        </div>
-        <div class="ui slide masked reveal image">
-          <img src="/images/heights.jpg" class="visible content">
-          <div class="hidden content">
-            <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-              <i class="add to calendar icon"></i>
-            </button>
-              <button class="ui icon button">
-                <i class="empty star icon"></i>
-              </button></div>
-          </div>
-        </div>
-
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
-      </div>        <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          Sandy Beach
-        </div>
-        <div class="ui slide masked reveal image">
-          <img src="/images/sandy.jpg" class="visible content">
-          <div class="hidden content">
-            <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-              <i class="add to calendar icon"></i>
-            </button>
-              <button class="ui icon button">
-                <i class="empty star icon"></i>
-              </button></div>
-          </div>
-        </div>
-
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
+{{#If_Logged_In}}
+  <div style="padding-top: 81px" class="ui container">
+    <h3 class="ui center aligned icon header">
+      <i class="map pin icon"></i>
+      <div class="content">
+        Recent Activity
+        <div class="sub header">Activities users have recently done in your area</div>
       </div>
-      </div>
+    </h3>
+
+    <div class="ui cards">
+
+      {{#each activity in activities }}
+{{>Activity_Card activity=activity}}
+      {{/each}}
 
     </div>
+  </div>
 
-    <div class="ui section divider"></div>
+  <div class="ui section divider"></div>
 
-    <div class="ui container">
-      <h3 class="ui center aligned icon header">
-        <i class="calendar icon"></i>
-        <div class="content">
-          Upcoming Events
-          <div class="sub header">Interesting and fun events happening around the island!</div>
-        </div>
-      </h3>
-
-      <div class="ui fluid four stackable cards">
-        <div class="ui card">
-          <div class="content">
-            <div class="right floated meta">14h</div>
-            Eat The Street
-          </div>
-          <div class="ui slide masked reveal image">
-            <img src="http://dev.eatthestreethawaii.com/wp-content/uploads/2014/04/newETSLogo-300x300-1.png" class="visible content">
-            <div class="hidden content">
-              <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-                <i class="add to calendar icon"></i>
-              </button>
-                <button class="ui icon button">
-                  <i class="empty star icon"></i>
-                </button></div>
-            </div>
-          </div>
-
-          <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-            <i class="comment icon"></i>
-            3 comments
-          </div>
-          <div class="extra content">
-            <div class="ui large transparent left icon input">
-              <i class="heart outline icon"></i>
-              <input type="text" placeholder="Add Comment...">
-            </div>
-          </div>
-        </div>
-        <div class="ui card">
-          <div class="content">
-            <div class="right floated meta">12h</div>
-            Manoa Falls
-          </div>
-          <div class="ui slide masked reveal image">
-            <img src="/images/manoafalls.jpg" class="visible content">
-            <div class="hidden content">
-              <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-                <i class="add to calendar icon"></i>
-              </button>
-                <button class="ui icon button">
-                  <i class="empty star icon"></i>
-                </button></div>
-            </div>
-          </div>
-
-          <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-            <i class="comment icon"></i>
-            3 comments
-          </div>
-          <div class="extra content">
-            <div class="ui large transparent left icon input">
-              <i class="heart outline icon"></i>
-              <input type="text" placeholder="Add Comment...">
-            </div>
-          </div>
-        </div>        <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          St. Louis Heights
-        </div>
-        <div class="ui slide masked reveal image">
-          <img src="/images/heights.jpg" class="visible content">
-          <div class="hidden content">
-            <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-              <i class="add to calendar icon"></i>
-            </button>
-              <button class="ui icon button">
-                <i class="empty star icon"></i>
-              </button></div>
-          </div>
-        </div>
-
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
-      </div>        <div class="ui card">
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          Sandy Beach
-        </div>
-        <div class="ui slide masked reveal image">
-          <img src="/images/waikiki.jpg" class="visible content">
-          <div class="hidden content">
-            <div style="padding-top:115px" class="ui center aligned container"><button class="ui icon button">
-              <i class="add to calendar icon"></i>
-            </button>
-              <button class="ui icon button">
-                <i class="empty star icon"></i>
-              </button></div>
-          </div>
-        </div>
-
-        <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-          <i class="comment icon"></i>
-          3 comments
-        </div>
-        <div class="extra content">
-          <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-          </div>
-        </div>
+  <div class="ui container">
+    <h3 class="ui center aligned icon header">
+      <i class="calendar icon"></i>
+      <div class="content">
+        Upcoming Events
+        <div class="sub header">Interesting and fun events happening around the island!</div>
       </div>
-      </div>
+    </h3>
+
+    <div class="ui cards">
+
+      {{#each activity in activities }}
+        {{>Activity_Card activity=activity}}
+      {{/each}}
+
+
     </div>
-    <div class="ui section divider"></div>
-  {{/If_Logged_In}}
+  </div>
+  <div class="ui section divider"></div>
+{{/If_Logged_In}}
 </template>

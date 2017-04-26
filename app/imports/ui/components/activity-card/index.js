@@ -1,0 +1,2 @@
+import './activity-card.html';
+

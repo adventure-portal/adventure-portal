@@ -1,0 +1,32 @@
+<template name="Activity_Card">
+
+  <div class="card">
+    <div class="content">
+      <div class="right floated meta">{{ activity.hours }}</div>
+      <div class="header">
+        {{ activity.title }}
+      </div>
+      <div class="ui slide masked reveal image">
+        <img class="visible content" src="{{ activity.picture }}">
+        <div class="hidden content">
+          <div style="padding-top:115px" class="ui center aligned container">
+            <button class="ui icon button">
+              <i class="add to calendar icon"></i>
+            </button>
+            <button class="ui icon button">
+              <i class="empty star icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      {{ activity.rating }}
+    </span>
+        {{ activity.cost }}
+      </div>
+    </div>
+  </div>
+</template>
