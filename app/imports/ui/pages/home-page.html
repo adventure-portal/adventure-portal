@@ -42,11 +42,19 @@
     </div>
   </div>
 
-  <!-- Picture -->
+  <!-- Picture divider with login/logout buttons -->
   <div class="home-page-div-divider">
+    <!-- Currently logged in -->
+    {{#if currentUser}}
     <div class="ui middle aligned centered grid text container">
-      <h1 class="ui main header">Join for free!</h1>
+      <button style="margin-top: 70px" class="ui huge button logout">Logout</button>
     </div>
+    <!-- Login -->
+    {{else}}
+    <div class="ui middle aligned centered grid text container">
+      <button style="margin-top: 70px" class="ui huge button login">Join for Free!</button>
+    </div>
+    {{/if}}
   </div>
 
   <!-- Bottom stuff -->
@@ -114,3 +122,4 @@
     </div>
   </div>
 </template>
+
