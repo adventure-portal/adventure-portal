@@ -4,6 +4,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
 import { Activities } from '/imports/api/activity/ActivityCollection';
+import { Interests } from '/imports/api/interests/InterestsCollection';
 import './edit-my-profile-page.html';
 import '/imports/ui/components/form-controls';
 
@@ -11,8 +12,8 @@ const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Edit_My_Profile_Page.onCreated(function onCreated() {
-  this.subscribe(Activities.getPublicationName());
   this.subscribe(Users.getPublicationName());
+  this.subscribe(Interests.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
@@ -36,6 +37,14 @@ Template.Edit_My_Profile_Page.helpers({
   },
   profile() {
     return Users.findDoc(FlowRouter.getParam('username'));
+  },
+  interests() {
+    const userProfile = Users.findDoc(FlowRouter.getParam('username'));
+    const selectedInterests = userProfile.interests;
+    return userProfile && _.map(Interests.findAll(),
+            function makeInterestObject(interest) {
+              return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
+            });
   },
 });
 

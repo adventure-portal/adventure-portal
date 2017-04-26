@@ -116,4 +116,4 @@ class InterestsCollection extends BaseCollection {
 /**
  * Provides the singleton instance of this class to all other entities.
  */
-export const Interests = new InterestCollection();
+export const Interests = new InterestsCollection();
