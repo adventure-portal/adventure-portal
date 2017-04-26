@@ -17,3 +17,6 @@ import './my-profile.html';
 
 import './admin-login-page.html';
 import './admin-login-page.js';
+
+import './edit-my-profile-page.html';
+import './edit-my-profile-page.js';

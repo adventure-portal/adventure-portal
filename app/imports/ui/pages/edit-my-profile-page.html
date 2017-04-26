@@ -1,0 +1,40 @@
+<template name="Edit_My_Profile_Page">
+<!--Should verify that the logged in user can only edit their page.-->
+  <!--Add authentication check for edit profile page-->
+  {{#if Template.subscriptionsReady}}
+
+  <div class="ui text container segment edit profile">
+    <div class="ui dividing header">
+      <h1>Edit your Profile</h1>
+    </div>
+    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+      <div class="fields">
+        {{> Text_Form_Control label="First" placeholder="First Name" value=profile.firstName errorMessage=(fieldError "firstName")}}
+        {{> Text_Form_Control label="Last" placeholder="Last Name" value=profile.lastName errorMessage=(fieldError "lastName")}}
+
+      </div>
+
+      <div class="field">
+        {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
+      </div>
+
+      <div class="field">
+        {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+      </div>
+
+      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Write a short bio statement here." errorMessage=(fieldError "bio")}}
+
+
+      <button class="ui primary button" type="submit">Save Changes</button>
+      {{#if displaySuccessMessage}}
+      <div class="ui success message">
+        <p>Profile data successfully updated.</p>
+      </div>
+      {{/if}}
+    </form>
+  </div>
+
+  {{/if}}
+
+</template>
