@@ -19,7 +19,7 @@ Template.My_Profile_Page.helpers({
     const userProfile = Users.findDoc(FlowRouter.getParam('username'));
     const userActivities = userProfile.pinnedActivities;
     return userProfile && _.map(Activities.findAll(),
-            function makeInterestObject(activity) {
+            function makeActivityObject(activity) {
               return { label: activity.name, selected: _.contains(pinnedActivities, Activity.name) };
             });
   },
