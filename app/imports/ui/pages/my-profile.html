@@ -54,7 +54,11 @@
       </h2>
       <div class="content">
         {{#if profile.pinnedActivities}}
-        <!--Pull from user's favorite adventures-->
+        <div class="ui cards">
+          {{#each activity in profile.pinnedActivities }}
+            {{>Activity_Card activity=activity}}
+          {{/each}}
+        </div>
         {{else}}
         <h2 style="text-align: center">You don't have any favorite adventures.</h2>
         {{/if}}
