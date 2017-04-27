@@ -5,7 +5,6 @@ import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
 import { Activities } from '/imports/api/activity/ActivityCollection';
 import { Interests } from '/imports/api/interests/InterestsCollection';
-import './edit-my-profile-page.html';
 import '/imports/ui/components/form-controls';
 
 const displaySuccessMessage = 'displaySuccessMessage';
