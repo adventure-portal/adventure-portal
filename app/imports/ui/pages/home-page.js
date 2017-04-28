@@ -18,8 +18,8 @@ Template.Home_Page.events({
       }
     };
     Meteor.loginWithCas(callback);
-    //Move to top of page
-    window.scroll(0,0);
+    // Move to top of page
+    window.scroll(0, 0);
     return false;
   },
 
@@ -32,8 +32,8 @@ Template.Home_Page.events({
     event.preventDefault();
     Meteor.logout();
     FlowRouter.go('/');
-    //Move to top of page
-    window.scroll(0,0);
+    // Move to top of page
+    window.scroll(0, 0);
     return false;
   },
 });

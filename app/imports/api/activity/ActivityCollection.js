@@ -2,7 +2,6 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
-import { _ } from 'meteor/underscore';
 
 /** @module Interest */
 

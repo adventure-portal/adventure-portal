@@ -9,7 +9,7 @@ Template.If_Admin_Logged_In.helpers({
   authInProcess: function authInProcess() {
     return Meteor.loggingIn();
   },
-   //@returns {boolean} True if there is a logged in user.
+   // @returns {boolean} True if there is a logged in user.
 
   canShow: function canShow() {
     return !!Meteor.user();
