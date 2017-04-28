@@ -1,5 +1,4 @@
 import { Template } from 'meteor/templating';
-import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
@@ -26,5 +25,3 @@ Template.My_Profile_Page.helpers({
             });
   },
 });
-
-

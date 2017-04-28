@@ -3,7 +3,6 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Users } from '/imports/api/users/UsersCollection';
-import { Activities } from '/imports/api/activity/ActivityCollection';
 import { Interests } from '/imports/api/interests/InterestsCollection';
 import '/imports/ui/components/form-controls';
 
