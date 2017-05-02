@@ -50,11 +50,11 @@
   </div>
 
   <div class="ui centered container adventure display">
-      <div class="ui cards">
-        {{#each activity in activities }}
-        {{>Activity_Card activity=activity}}
-        {{/each}}
-      </div>
+    <div class="ui special link cards">
+      {{#each activityItem in activities }}
+      {{>Activity_Card activity=activityItem}}
+      {{/each}}
+    </div>
   </div>
 
   <div class="adventure bottom whitespace"></div>
