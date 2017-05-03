@@ -22,14 +22,13 @@ Template.Dashboard_Page.helpers({
 
 Template.Dashboard_Page.events({
   /* Favorite event on clicking heart */
-  'click .heart': function (event) {
+  'click .heart': function favoriteActivity(event) {
     const userProfile = Users.findDoc(FlowRouter.getParam('username'));
     const activityId = this.activity._id;
     event.preventDefault();
     if (_.contains(userProfile.pinnedActivities, activityId)) {
       Users.update({ _id: userProfile._id }, { $pull: { pinnedActivities: activityId } });
-    }
-    else {
+    } else {
       if (userProfile.pinnedActivities === null) {
         Users.update({ _id: userProfile._id }, { $set: { pinnedActivities: [] } });
       }
