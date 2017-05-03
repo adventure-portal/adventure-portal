@@ -26,15 +26,17 @@ Template.Adventures_Page.events({
   /* Favorite event on clicking heart */
   'click .heart': function favoriteActivity(event) {
     const userProfile = Users.findDoc(FlowRouter.getParam('username'));
-    const activityId = this.activity._id;
+    const newFavorite = this.activity;
     event.preventDefault();
-    if (_.contains(userProfile.pinnedActivities, activityId)) {
-      Users.update({ _id: userProfile._id }, { $pull: { pinnedActivities: activityId } });
+    console.dir(userProfile.pinnedActivities);
+    if (_.findWhere(userProfile.pinnedActivities, newFavorite)) {
+      Users.update({ _id: userProfile._id }, { $pull: { pinnedActivities: { _id: newFavorite._id } } },);
+      console.dir(userProfile.pinnedActivities);
     } else {
       if (userProfile.pinnedActivities === null) {
         Users.update({ _id: userProfile._id }, { $set: { pinnedActivities: [] } });
       }
-      Users.update({ _id: userProfile._id }, { $push: { pinnedActivities: activityId } });
+      Users.update({ _id: userProfile._id }, { $push: { pinnedActivities: newFavorite } });
     }
   },
 });
