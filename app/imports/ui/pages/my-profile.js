@@ -25,21 +25,3 @@ Template.My_Profile_Page.helpers({
             });
   },
 });
-Template.My_Profile_Page.events({
-  /* Favorite event on clicking heart */
-  'click .heart': function favoriteActivity(event) {
-    const userProfile = Users.findDoc(FlowRouter.getParam('username'));
-    const newFavorite = this.activity;
-    event.preventDefault();
-    console.dir(userProfile.pinnedActivities);
-    if (_.findWhere(userProfile.pinnedActivities, newFavorite)) {
-      Users.update({ _id: userProfile._id }, { $pull: { pinnedActivities: { _id: newFavorite._id } } },);
-      console.dir(userProfile.pinnedActivities);
-    } else {
-      if (userProfile.pinnedActivities === null) {
-        Users.update({ _id: userProfile._id }, { $set: { pinnedActivities: [] } });
-      }
-      Users.update({ _id: userProfile._id }, { $push: { pinnedActivities: newFavorite } });
-    }
-  },
-});
