@@ -36,7 +36,7 @@ FlowRouter.route('/:username/adventures', {
   },
 });
 
-FlowRouter.route('/:username/details/:adventureID', {
+FlowRouter.route('/:username/:adventureID/details', {
   name: 'Details_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Details_Page' });

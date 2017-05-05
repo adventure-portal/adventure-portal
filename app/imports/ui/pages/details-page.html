@@ -1,3 +1,35 @@
 <template name="Details_Page">
+  {{#if Template.subscriptionsReady}}
+  {{#if adventureProfile}}
+  <div style="margin-top: 100px" class="ui container">
+    <h2 class="ui center aligned icon header">
+      <img class="ui medium circular image" src={{ adventureProfile.picture }}>
+      <h2>{{ adventureProfile.title }}</h2>
+    </h2>
 
+    <h3 class="ui dividing header">
+      About this Adventure
+    </h3>
+    <p>{{ adventureProfile.description }}</p>
+
+    <h3 class="ui dividing header">
+      Hours and Location
+    </h3>
+    <p>{{ adventureProfile.hours }}</p>
+    <p>{{ adventureProfile.location }}</p>
+
+    <h3 class="ui dividing header">
+      Cost
+    </h3>
+    <div class="ui tag labels">
+      <a class="ui label">
+        {{ adventureProfile.cost }}
+      </a>
+    </div>
+  </div>
+  <div class="add activity bottom whitespace"></div>
+  {{else}}
+  {{ > App_Not_Found }}
+  {{/if}}
+  {{/if}}
 </template>
