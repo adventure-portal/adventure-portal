@@ -3,7 +3,6 @@ import { Activities } from '/imports/api/activity/ActivityCollection';
 import { Interests } from '/imports/api/interests/InterestsCollection';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
-import { FlowRouter } from 'meteor/kadira:flow-router';
 
 const selectedInterestsKey = 'selectedInterests';
 

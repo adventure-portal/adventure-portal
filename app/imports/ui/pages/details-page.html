@@ -26,7 +26,13 @@
         {{ adventureProfile.cost }}
       </a>
     </div>
+    <h3 class="ui dividing header">
+      Tags
+    </h3>{{#each interest in adventureProfile.interests}}
+    <div class="ui teal tag small label">{{interest}}</div>
+    {{/each}}
   </div>
+
   <div class="add activity bottom whitespace"></div>
   {{else}}
   {{ > App_Not_Found }}

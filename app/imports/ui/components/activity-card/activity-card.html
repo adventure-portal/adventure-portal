@@ -1,5 +1,5 @@
 <template name="Activity_Card">
-  <div class="card">
+  <a class="card" href="/{{profile.username}}/{{activity._id}}/details">
     <div class="blurring dimmable image">
       <div class="ui dimmer">
         <div class="content">
@@ -40,7 +40,7 @@
     </span>
       {{ activity.cost }}
     </div>
-  </div>
+  </a>
 
   <script>
     $('.special.cards .image').dimmer({

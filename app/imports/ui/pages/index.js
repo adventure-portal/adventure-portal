@@ -24,5 +24,3 @@ import './edit-my-profile-page.js';
 
 import './details-page.html';
 import './details-page.js';
-
-
