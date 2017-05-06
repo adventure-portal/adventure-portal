@@ -1,4 +1,5 @@
 <template name="Adventures_Page">
+  {{#if Template.subscriptionsReady}}
   {{#If_Logged_In}}
   <div style="padding-top: 105px" class="ui middle aligned centered grid text container">
     <h1></h1>
@@ -46,16 +47,27 @@
         </div>
         <div class="results"></div>
       </div>
+
+
+      <form class="ui equal width form filter-data-form">
+        <div class="field">
+          {{> Select_Form_Control label="Interests" options=interests multiple=true }}
+        </div>
+        <button class="ui teal button" type="submit">Filter</button>
+      </form>
+
+
     </div>
   </div>
 
   <div class="ui centered container adventure display">
     <div class="ui special link cards">
       {{#each activityItem in activities }}
-      {{>Activity_Card activity=activityItem}}
+      {{>Activity_Card activity=activityItem }}
       {{/each}}
     </div>
   </div>
+
 
   <div class="adventure bottom whitespace"></div>
   <div class="adventure bottom color">
@@ -64,6 +76,7 @@
 
 
   {{/If_Logged_In}}
+  {{/if}}
 </template>
 
 
