@@ -9,6 +9,14 @@
           "description": ""
         },
         {
+          "name": "Dank",
+          "description": ""
+        },
+        {
+          "name": "Family",
+          "description": ""
+        },
+        {
           "name": "Surfing",
           "description": ""
         },
@@ -69,7 +77,11 @@
           "description": ""
         },
         {
-          "name": "Martial Arts",
+          "name": "Spicy",
+          "description": ""
+        },
+        {
+          "name": "Scenic",
           "description": ""
         },
         {
@@ -82,52 +94,312 @@
       "name": "ActivityCollection",
       "contents": [
         {
-          "title": "Manoa",
-          "location": "Manoa",
+          "title": "China Walls",
+          "location": "Southeast Oahu",
+          "hours": "6AM - 9PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/china-walls.jpg",
+          "description": "An amazing view, but a hidden location",
+          "interests": [
+            "Beach",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Cockroach Cove",
+          "location": "Koko Head District Park",
           "hours": "8AM - 4PM",
           "cost": "$0",
           "rating": "4 Stars",
-          "picture": "https://i.ytimg.com/vi/7ZuguSwUiWo/maxresdefault.jpg",
-          "description": "Manoa is whats up right now",
+          "picture": "/images/initial/cockroach-cove.jpg",
+          "description": "The secret beach",
+          "interests": [
+            "Beach",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Cromwell's Beach",
+          "location": "Kulamanu",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/Cromwell.jpg",
+          "description": "There are two good swimming spots and the view of the rock wall/ houses is amazing",
+          "interests": [
+            "Beach",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Diamond Head",
+          "location": "Honolulu",
+          "hours": "6AM - 6PM",
+          "cost": "$0",
+          "rating": "4.5 Stars",
+          "picture": "/images/initial/diamond-head.jpg",
+          "description": "Diamond Head is the name of a volcanic tuff cone on the Hawaiian island of Oʻahu",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Manoa Falls",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/manoafalls.jpg",
+          "description": "Manoa Falls is a waterfall located in the Manoa Valley",
           "interests": [
             "Hiking",
+            "Scenic",
+            "Dank",
+            "Family"
+          ]
+        },
+
+        {
+          "title": "Crouching Lion",
+          "location": "Huamalani Rd",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/crouching.jpg",
+          "description": "Not for the faint of heart or those easily scared of heights",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Kalihi Ice Ponds",
+          "location": "3698 Kalihi St",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/kalihi-ice-ponds.jpg",
+          "description": "Kalihi Ice Ponds are a set of three-tiered waterfalls and pools located in the back of Kalihi Valley",
+          "interests": [
+            "Hiking",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Keiki Beach",
+          "location": "Haleiwa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.3 Stars",
+          "picture": "/images/initial/keiki-beach.jpg",
+          "description": "Hidden on a concealed residential road on the North Shore is Beach Access",
+          "interests": [
+            "Swimming",
+            "Dank"
+          ]
+        },
+        {
+          "title": "Koko Head",
+          "location": "Hawaii Kai",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.4 Stars",
+          "picture": "/images/initial/koko-head.jpg",
+          "description": "Koko Crater Trail is a 1.8 mile heavily trafficked out and back trail",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Makua Caves",
+          "location": "Farrington Hwy",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.7 Stars",
+          "picture": "/images/initial/makua-caves.jpg",
+          "description": "Short hike with amazing views",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Makupuu Ridge",
+          "location": "Kalanianaole Hwy",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/makupuu-ridge.jpg",
+          "description": "An adventurous 4 mile ridge hike located on the eastern side of Oahu",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Maunawili Falls",
+          "location": "1201 Kelewina St",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.5 Stars",
+          "picture": "/images/initial/maunawili-falls.jpg",
+          "description": "A great hike in Kailua along the river that eventually stops at a beautiful waterfall",
+          "interests": [
+            "Hiking",
+            "Family"
+          ]
+        },
+        {
+          "title": "Pali Ridge",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.5 Stars",
+          "picture": "/images/initial/pali.jpg",
+          "description": "The Pali Lookout shows the visitor the natural beauty of the Windward side",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Moanalua Valley Hike",
+          "location": "1849 Ala Aolani St",
+          "hours": "6AM - 6PM",
+          "cost": "$0",
+          "rating": "4.6 Stars",
+          "picture": "/images/initial/moanalua-valley-hike.jpg",
+          "description": "This relaxing trail is great for the whole family",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Pillboxes",
+          "location": "Kailua",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.7 Stars",
+          "picture": "/images/initial/pillboxes.jpg",
+          "description": "Short narrow trail that features 2 military bunkers and a panoramic view of Lanikai Beach",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Banzai Pipeline",
+          "location": "Haleiwa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.8 Stars",
+          "picture": "/images/initial/pipeline.jpg",
+          "description": "Known around the world for its perfect barelling waves",
+          "interests": [
+            "Swimming",
+            "Surfing",
+            "Beach"
+          ]
+        },
+        {
+          "title": "Scuba Diving",
+          "location": "Waikiki",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/scuba.jpg",
+          "description": "Get dank with the water",
+          "interests": [
+            "Swimming",
+            "Beach",
+            "Dank"
+          ]
+        },
+        {
+          "title": "Stairway to Heaven",
+          "location": "Haleiva",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/stairway.jpg",
+          "description": "Go into the clouds",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Sunset Beach",
+          "location": "North Shore",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/sunset-beach.jpg",
+          "description": "Nnown for big wave surfing during the winter season",
+          "interests": [
+            "Swimming",
+            "Beach",
             "Surfing"
           ]
         },
         {
-          "title": "Waimanalo Falls",
+          "title": "Tantalus Lookout",
           "location": "Manoa",
           "hours": "8AM - 4PM",
           "cost": "$0",
-          "rating": "4 Stars",
-          "picture": "/images/manoafalls.jpg",
-          "description": "Manoa is whats up right now",
+          "rating": "4.5 Stars",
+          "picture": "/images/initial/tantalus.jpg",
+          "description": "View the gorgeous city lights and breathtaking view of the city and ocean",
           "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Waikiki Beach",
+          "location": "Waikiki",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4.3 Stars",
+          "picture": "/images/initial/waikiki-beach.jpg",
+          "description": "Swim in sunscreen water",
+          "interests": [
+            "Swimming",
             "Beach",
             "Surfing"
           ]
-        }, {
-          "title": "Waikiki",
-          "location": "Manoa",
+        },
+        {
+          "title": "Zipline",
+          "location": "Deep dark forest",
           "hours": "8AM - 4PM",
           "cost": "$0",
-          "rating": "4 Stars",
-          "picture": "/images/manoafalls.jpg",
-          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "rating": "4.5 Stars",
+          "picture": "/images/initial/zipline.jpg",
+          "description": "The ideal outdoor experience for any fun-loving thrill-seeker",
           "interests": [
-            "Scuba"
+            "Hiking"
           ]
-        }, {
-          "title": "Hawaii Kai",
-          "location": "Manoa",
+        },
+        {
+          "title": "Laie Point",
+          "location": "Laie",
           "hours": "8AM - 4PM",
           "cost": "$0",
-          "rating": "4 Stars",
-          "picture": "/images/manoafalls.jpg",
-          "description": "Manoa is whats up right now",
+          "rating": "4.7 Stars",
+          "picture": "/images/initial/laie-point.jpg",
+          "description": "Holy its a rock!",
+          "interests": [
+            "Scenic",
+            "Dank"
+          ]
+        },
+        {
+          "title": "Sandy Beach",
+          "location": "Manoa",
+          "hours": "6AM - 9PM",
+          "cost": "$0",
+          "rating": "4.4 Stars",
+          "picture": "/images/initial/sandy-beach.jpg",
+          "description": "One of the most beautiful beach parks on the island",
           "interests": [
             "Beach",
-            "Surfing"
+            "Surfing",
+            "Swimming"
           ]
         }
       ]

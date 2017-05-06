@@ -28,7 +28,6 @@ Template.Adventures_Page.helpers({
      const allActivities = Activities.findAll();
      const selectedInterests = Template.instance().messageFlags.get(selectedInterestsKey);
 
-    console.log(Activities.find().fetch());
      return _.filter(allActivities, activity => _.intersection(activity.interests, selectedInterests).length > 0);
   },
   interests() {
@@ -47,7 +46,6 @@ Template.Adventures_Page.events({
     event.preventDefault();
     const selectedOptions = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
     instance.messageFlags.set(selectedInterestsKey, _.map(selectedOptions, (option) => option.value));
-    console.log("cllicked");
   },
 });
 
