@@ -1,5 +1,4 @@
 <template name="Adventures_Page">
-  {{#if Template.subscriptionsReady}}
   {{#If_Logged_In}}
   <div style="padding-top: 105px" class="ui middle aligned centered grid text container">
     <h1></h1>
@@ -7,6 +6,7 @@
 
   <div class="ui adventure attached stackable container">
     <div class="ui adventure menu">
+
       <div class="ui dropdown item">
         <input type="hidden" name="sort-by">
         <div class="default text">Sort By</div>
@@ -23,7 +23,7 @@
         <div class="default text">Filter By Tags</div>
         <i class="dropdown icon"></i>
         <div class="menu">
-          {{#each interest in interests}}
+          {{#each interest in interests.name}}
           <div class="item" data-value={{interest}}>{{interest}}</div>
           {{/each}}
         </div>
@@ -47,16 +47,18 @@
         </div>
         <div class="results"></div>
       </div>
+      <div class="ui right search item">
 
+      </div>
 
-      <form class="ui equal width form filter-data-form">
-        <div class="field">
-          {{> Select_Form_Control label="Interests" options=interests multiple=true }}
-        </div>
-        <button class="ui teal button" type="submit">Filter</button>
-      </form>
-
-
+      <div style="margin-top: 10px;" class="ui center aligned container">
+        <form class="ui equal width form filter-data-form">
+          <div class="field">
+            {{> Select_Form_Control label="Interests" options=interests multiple=true }}
+          </div>
+          <button style="margin-bottom: 10px" class="ui teal button" type="submit">Filter</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -76,7 +78,6 @@
 
 
   {{/If_Logged_In}}
-  {{/if}}
 </template>
 
 

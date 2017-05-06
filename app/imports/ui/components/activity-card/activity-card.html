@@ -25,6 +25,13 @@
       <div class="description">
         {{ activity.description }}
       </div>
+      <div class="ui container">
+        <div style="margin-top: 10px">
+          {{#each interest in activity.interests}}
+          <a style="margin-bottom: 2px" class="ui teal tag small label">{{interest}}</a>
+          {{/each}}
+        </div>
+      </div>
     </div>
     <div class="extra content">
     <span class="right floated">
