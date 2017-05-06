@@ -22,7 +22,7 @@ class UsersCollection extends BaseCollection {
       email: { type: String, optional: true },
       bio: { type: String, optional: true },
       interests: { type: [String], optional: true },
-      pinnedActivities: { type: [String], optional: true },
+      pinnedActivities: { type: [Object], optional: true, blackbox: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
     }));
   }

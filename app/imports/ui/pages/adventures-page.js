@@ -50,3 +50,4 @@ Template.Adventures_Page.events({
     console.log("cllicked");
   },
 });
+
