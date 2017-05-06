@@ -73,6 +73,10 @@
           "description": ""
         },
         {
+          "name": "Scenic",
+          "description": ""
+        },
+        {
           "name": "Beach",
           "description": ""
         }
@@ -82,52 +86,317 @@
       "name": "ActivityCollection",
       "contents": [
         {
-          "title": "Manoa",
+          "title": "China Walls",
           "location": "Manoa",
           "hours": "8AM - 4PM",
           "cost": "$0",
           "rating": "4 Stars",
-          "picture": "https://i.ytimg.com/vi/7ZuguSwUiWo/maxresdefault.jpg",
-          "description": "Manoa is whats up right now",
-          "interests": [
-            "Hiking",
-            "Surfing"
-          ]
-        },
-        {
-          "title": "Waimanalo Falls",
-          "location": "Manoa",
-          "hours": "8AM - 4PM",
-          "cost": "$0",
-          "rating": "4 Stars",
-          "picture": "/images/manoafalls.jpg",
+          "picture": "/images/initial/china-walls.jpg",
           "description": "Manoa is whats up right now",
           "interests": [
             "Beach",
-            "Surfing"
+            "Swimming"
           ]
-        }, {
+        },
+        {
+          "title": "Cockroach Cove",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/cockroach-cove.jpg",
+          "description": "Manoa is whats up right now",
+          "interests": [
+            "Beach",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Cromwell's Beach",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/Cromwell.jpg",
+          "description": "Manoa is whats up right now",
+          "interests": [
+            "Beach",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Diamond Head",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/diamond-head.jpg",
+          "description": "Manoa is whats up right now",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
           "title": "Waikiki",
           "location": "Manoa",
           "hours": "8AM - 4PM",
           "cost": "$0",
           "rating": "4 Stars",
-          "picture": "/images/manoafalls.jpg",
+          "picture": "/images/initial/manoafalls.jpg",
           "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
           "interests": [
             "Scuba"
           ]
-        }, {
-          "title": "Hawaii Kai",
+        },
+
+        {
+          "title": "Crouching Lion",
           "location": "Manoa",
           "hours": "8AM - 4PM",
           "cost": "$0",
           "rating": "4 Stars",
-          "picture": "/images/manoafalls.jpg",
+          "picture": "/images/initial/crouching.jpg",
+          "description": "HNNNGGGGGG",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Kalihi Ice Ponds",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/kalihi-ice-ponds.jpg",
+          "description": "HNNNGGGGGG",
+          "interests": [
+            "Hiking",
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Keiki Beach",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/keiki-beach.jpg",
+          "description": "HNNNGGGGGG",
+          "interests": [
+            "Swimming"
+          ]
+        },
+        {
+          "title": "Koko Head",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/koko-head.jpg",
+          "description": "HNNNGGGGGG",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Makua Caves",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/makua-caves.jpg",
+          "description": "HNNNGGGGGG",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Makupuu Ridge",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/makupuu-ridge.jpg",
+          "description": "HNNNGGGGGG",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Maunawili Falls",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/maunawili-falls.jpg",
+          "description": "HGH",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Pali Ridge",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/pali.jpg",
+          "description": "d-falls",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Moanalua Valley Hike",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/moanalua-valley-hike.jpg",
+          "description": "d-falls",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Pillboxes",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/pillboxes.jpg",
+          "description": "d-falls",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Pipeline",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/pipeline.jpg",
+          "description": "d-falls",
+          "interests": [
+            "Swimming",
+            "Surfing",
+            "Beach"
+          ]
+        },
+        {
+          "title": "Pillboxes",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/pillboxes.jpg",
+          "description": "d-falls",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Scuba Diving",
+          "location": "Waikiki",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/scuba.jpg",
+          "description": "get dank with the water",
+          "interests": [
+            "Swimming",
+            "Beach"
+          ]
+        },
+        {
+          "title": "Stairway to Heaven",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/stairway.jpg",
+          "description": "Go into the clouds",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Sunset Beach",
+          "location": "North Shore",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/sunset-beach.jpg",
+          "description": "Get LIT",
+          "interests": [
+            "Swimming",
+            "Beach",
+            "Surfing"
+          ]
+        },
+        {
+          "title": "Tantalus",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/tantalus.jpg",
+          "description": "Get LIT",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Waikiki Beach",
+          "location": "Waikiki",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/waikiki-beach.jpg",
+          "description": "Get LIT",
+          "interests": [
+            "Swimming",
+            "Beach",
+            "Surfing"
+          ]
+        },
+        {
+          "title": "Zipline",
+          "location": "Deep dark forest",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/zipline.jpg",
+          "description": "Get shreddedddd",
+          "interests": [
+            "Hiking"
+          ]
+        },
+        {
+          "title": "Laie Point",
+          "location": "Deep dark forest",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "5 Stars",
+          "picture": "/images/initial/laie-point.jpg",
+          "description": "Holy its a rock!",
+          "interests": [
+            "Scenic"
+          ]
+        },
+        {
+          "title": "Sandy Beach",
+          "location": "Manoa",
+          "hours": "8AM - 4PM",
+          "cost": "$0",
+          "rating": "4 Stars",
+          "picture": "/images/initial/sandy-beach.jpg",
           "description": "Manoa is whats up right now",
           "interests": [
             "Beach",
-            "Surfing"
+            "Surfing",
+            "Swimming"
           ]
         }
       ]
