@@ -36,6 +36,13 @@ FlowRouter.route('/:username/adventures', {
   },
 });
 
+FlowRouter.route('/:username/:adventureID/details', {
+  name: 'Details_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Details_Page' });
+  },
+});
+
 FlowRouter.route('/:username/dashboard', {
   name: 'Dashboard_Page',
   action() {

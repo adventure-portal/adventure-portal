@@ -3,6 +3,12 @@ import { Users } from '/imports/api/users/UsersCollection';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 
+Template.Activity_Card.helpers({
+  profile() {
+    return Users.findDoc(FlowRouter.getParam('username'));
+  },
+});
+
 Template.Activity_Card.events({
   /* Favorite event on clicking star */
   'click .large.empty.star': function favoriteActivity(event) {
