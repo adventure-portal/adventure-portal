@@ -286,6 +286,10 @@ center.navbar-logo{
   box-shadow: none;
 }
 
+.ui.form .field > .selection.dropdown {
+  right: 15px;
+  border-radius: 5px;
+}
 /* ========================================== */
 /* Add Activity Page */
 /* ========================================== */

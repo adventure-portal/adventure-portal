@@ -88,7 +88,11 @@
           "cost": "$0",
           "rating": "4 Stars",
           "picture": "https://i.ytimg.com/vi/7ZuguSwUiWo/maxresdefault.jpg",
-          "description": "Manoa is whats up right now"
+          "description": "Manoa is whats up right now",
+          "interests": [
+            "Hiking",
+            "Surfing"
+          ]
         },
         {
           "title": "Waimanalo Falls",
@@ -97,7 +101,11 @@
           "cost": "$0",
           "rating": "4 Stars",
           "picture": "/images/manoafalls.jpg",
-          "description": "Manoa is whats up right now"
+          "description": "Manoa is whats up right now",
+          "interests": [
+            "Beach",
+            "Surfing"
+          ]
         }, {
           "title": "Waikiki",
           "location": "Manoa",
@@ -105,7 +113,10 @@
           "cost": "$0",
           "rating": "4 Stars",
           "picture": "/images/manoafalls.jpg",
-          "description": "Manoa is whats up right now"
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "interests": [
+            "Scuba"
+          ]
         }, {
           "title": "Hawaii Kai",
           "location": "Manoa",
@@ -113,7 +124,11 @@
           "cost": "$0",
           "rating": "4 Stars",
           "picture": "/images/manoafalls.jpg",
-          "description": "Manoa is whats up right now"
+          "description": "Manoa is whats up right now",
+          "interests": [
+            "Beach",
+            "Surfing"
+          ]
         }
       ]
     }

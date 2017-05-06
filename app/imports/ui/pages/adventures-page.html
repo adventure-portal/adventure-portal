@@ -6,6 +6,7 @@
 
   <div class="ui adventure attached stackable container">
     <div class="ui adventure menu">
+
       <div class="ui dropdown item">
         <input type="hidden" name="sort-by">
         <div class="default text">Sort By</div>
@@ -46,29 +47,29 @@
         </div>
         <div class="results"></div>
       </div>
+
+      <div class="ui right search item">
+      </div>
+
+      <div style="margin-top: 10px;" class="ui center aligned container">
+        <form class="ui equal width form filter-data-form">
+          <div class="field">
+            {{> Select_Form_Control label="Interests" options=interests multiple=true }}
+          </div>
+          <button style="margin-bottom: 10px" class="ui teal button" type="submit">Filter</button>
+        </form>
+      </div>
     </div>
   </div>
-
   <div class="ui centered container adventure display">
-      <div class="ui cards">
-        {{#each activity in activities }}
-        {{>Activity_Card activity=activity}}
-        {{/each}}
-      </div>
+    <div class="ui special link cards">
+      {{#each activityItem in activities }}
+      {{>Activity_Card activity=activityItem }}
+      {{/each}}
+    </div>
   </div>
-
   <div class="adventure bottom whitespace"></div>
   <div class="adventure bottom color">
-
   </div>
-
-
   {{/If_Logged_In}}
 </template>
-
-
-<!--
-
-https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg
-
--->

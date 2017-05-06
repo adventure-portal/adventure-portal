@@ -2,6 +2,7 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
+import { Interests } from '/imports/api/interests/InterestsCollection';
 
 /** @module Interest */
 
@@ -23,6 +24,7 @@ class ActivityCollection extends BaseCollection {
       rating: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       description: { type: String, optional: true },
+      interests: { type: [String], optional: true },
     }));
   }
 
@@ -45,7 +47,7 @@ class ActivityCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ title, location, hours, cost, rating, picture, description }) {
+  define({ title, location, hours, cost, rating, picture, description, interests }) {
     const checkPattern = {
       title: String,
       location: String,
@@ -60,7 +62,11 @@ class ActivityCollection extends BaseCollection {
     if (this.find({ title }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined.`);
     }
-    return this._collection.insert({ title, location, hours, cost, rating, picture, description });
+
+    // Throw an error if any of the passed Interest names are not defined.
+    Interests.assertNames(interests);
+
+    return this._collection.insert({ title, location, hours, cost, rating, picture, description, interests });
   }
 
   /**
@@ -77,7 +83,8 @@ class ActivityCollection extends BaseCollection {
     const rating = doc.rating;
     const picture = doc.picture;
     const description = doc.description;
-    return { title, location, hours, cost, rating, picture, description };
+    const interests = doc.interests;
+    return { title, location, hours, cost, rating, picture, description, interests };
   }
 }
 
