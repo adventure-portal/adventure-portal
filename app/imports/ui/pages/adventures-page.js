@@ -20,15 +20,15 @@ Template.Adventures_Page.onRendered(function onRendered() {
 
 Template.Adventures_Page.helpers({
   activities() {
-     // Initialize selectedInterests to all of them if messageFlags is undefined.
-     if (!Template.instance().messageFlags.get(selectedInterestsKey)) {
-     Template.instance().messageFlags.set(selectedInterestsKey, _.map(Interests.findAll(), interest => interest.name));
-     }
-     // Find all Activities with the currently selected interests.
-     const allActivities = Activities.findAll();
-     const selectedInterests = Template.instance().messageFlags.get(selectedInterestsKey);
+    // Initialize selectedInterests to all of them if messageFlags is undefined.
+    if (!Template.instance().messageFlags.get(selectedInterestsKey)) {
+      Template.instance().messageFlags.set(selectedInterestsKey, _.map(Interests.findAll(), interest => interest.name));
+    }
+    // Find all Activities with the currently selected interests.
+    const allActivities = Activities.findAll();
+    const selectedInterests = Template.instance().messageFlags.get(selectedInterestsKey);
 
-     return _.filter(allActivities, activity => _.intersection(activity.interests, selectedInterests).length > 0);
+    return _.filter(allActivities, activity => _.intersection(activity.interests, selectedInterests).length > 0);
   },
   interests() {
     return _.map(Interests.findAll(),

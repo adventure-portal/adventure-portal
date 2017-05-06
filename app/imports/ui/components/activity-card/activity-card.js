@@ -4,12 +4,12 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 
 Template.Activity_Card.events({
-  /* Favorite event on clicking heart */
-  'click .heart': function favoriteActivity(event) {
+  /* Favorite event on clicking star */
+  'click .large.empty.star': function favoriteActivity(event) {
     const userProfile = Users.findDoc(FlowRouter.getParam('username'));
     const newFavorite = this.activity;
     event.preventDefault();
-    if (_.findWhere(userProfile.pinnedActivities, newFavorite)) {
+    if (_.findWhere(userProfile.pinnedActivities, { _id: newFavorite._id })) {
       Users.update({ _id: userProfile._id }, { $pull: { pinnedActivities: { _id: newFavorite._id } } });
     } else {
       if (userProfile.pinnedActivities === null) {

@@ -54,7 +54,7 @@
       </h2>
       <div class="content">
         {{#if profile.pinnedActivities}}
-        <div class="ui cards">
+        <div class="ui four special link stackable cards">
           {{#each activity in profile.pinnedActivities }}
             {{>Activity_Card activity=activity}}
           {{/each}}
