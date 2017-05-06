@@ -23,7 +23,7 @@
         <div class="default text">Filter By Tags</div>
         <i class="dropdown icon"></i>
         <div class="menu">
-          {{#each interest in interests.name}}
+          {{#each interest in interests}}
           <div class="item" data-value={{interest}}>{{interest}}</div>
           {{/each}}
         </div>
@@ -47,8 +47,8 @@
         </div>
         <div class="results"></div>
       </div>
-      <div class="ui right search item">
 
+      <div class="ui right search item">
       </div>
 
       <div style="margin-top: 10px;" class="ui center aligned container">
@@ -61,7 +61,6 @@
       </div>
     </div>
   </div>
-
   <div class="ui centered container adventure display">
     <div class="ui special link cards">
       {{#each activityItem in activities }}
@@ -69,20 +68,8 @@
       {{/each}}
     </div>
   </div>
-
-
   <div class="adventure bottom whitespace"></div>
   <div class="adventure bottom color">
-
   </div>
-
-
   {{/If_Logged_In}}
 </template>
-
-
-<!--
-
-https://valorouswebdesign.com/wp-content/uploads/2016/12/Custom-404-Page-AS-107153871.jpg
-
--->
