@@ -487,3 +487,10 @@ center.navbar-logo{
   background-size:     cover;
 }
 
+/* ========================================== */
+/* Find Adventure page */
+/* ========================================== */
+
+.ui.icon.button.activity .big.empty.star.icon:hover {
+  color:yellow;
+}

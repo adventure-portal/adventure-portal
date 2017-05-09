@@ -11,7 +11,7 @@ Template.Activity_Card.helpers({
 
 Template.Activity_Card.events({
   /* Favorite event on clicking star */
-  'click .large.empty.star': function favoriteActivity(event) {
+  'click .ui.icon.button.activity': function favoriteActivity(event) {
     const userProfile = Users.findDoc(FlowRouter.getParam('username'));
     const newFavorite = this.activity;
     event.preventDefault();
@@ -24,5 +24,4 @@ Template.Activity_Card.events({
       Users.update({ _id: userProfile._id }, { $push: { pinnedActivities: newFavorite } });
     }
   },
-
 });
