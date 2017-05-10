@@ -7,11 +7,12 @@
       <div class="ui dividing header">
         <h1>Add an Adventure!</h1>
       </div>
-      <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+      <form class="ui equal width form activity-data-form {{ successClass }} {{ errorClass }}">
 
         <div class="fields">
           {{> Text_Form_Control label="Title" placeholder="Manoa Falls" value=newAdventure.title errorMessage=(fieldError "title")}}
           {{> Text_Form_Control label="Location" placeholder="Manoa" value=newAdventure.location errorMessage=(fieldError "location")}}
+          {{> Text_Form_Control label="Hours" placeholder="8AM - 9PM" value=newAdventure.hours errorMessage=(fieldError "hours")}}
 
         </div>
 
@@ -21,9 +22,9 @@
           {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
         </div>
 
-        <div class="field">
-          {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
-        </div>
+        <!-- <div class="field">
+          {> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+        </div>-->
 
         {{> TextArea_Form_Control label="Description" value=newAdventure.description placeholder="Please write a description of the activity here." errorMessage=(fieldError "description")}}
 

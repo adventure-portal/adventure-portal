@@ -60,7 +60,7 @@ class ActivityCollection extends BaseCollection {
     check({ title, location, hours, cost, rating, picture, description }, checkPattern);
 
     if (this.find({ title }).count() > 0) {
-      throw new Meteor.Error(`${name} is previously defined.`);
+      throw new Meteor.Error(`${title} is previously defined.`);
     }
 
     // Throw an error if any of the passed Interest names are not defined.

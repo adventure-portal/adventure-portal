@@ -11,7 +11,7 @@ const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Add_Activity_Page.onCreated(function onCreated() {
-  this.subscribe(Activities.getPublicationName());
+  //this.subscribe(Activities.getPublicationName());
   this.subscribe(Interests.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
@@ -34,18 +34,17 @@ Template.Add_Activity_Page.helpers({
     const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
     return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
   },
-  newAdventure() {
+  /*newAdventure() {
     return Activities.define();
   },
   interests() {
-    return _.map(Interests.findAll(),
-        function makeInterestObject(interest) {
-          return {
-            label: interest.name,
-            selected: _.contains(Template.instance().messageFlags.get(selectedInterestsKey), interest.name),
-          };
+    const activityProfile = Activities.findDoc();
+    const selectedInterests = activityProfile.interests;
+    return activityProfile && _.map(Interests.findAll(),
+    return _.map(Interests.findAll(), function makeInterestObject(interest) {
+          return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
         });
-  },
+  },*/
 });
 
 Template.Add_Activity_Page.events({
@@ -58,10 +57,13 @@ Template.Add_Activity_Page.events({
     const rating = event.target.Rating.value; // schema requires username.
     const picture = event.target.Picture.value;
     const description = event.target.Description.value;
-    const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
-    const interests = _.map(selectedInterests, (option) => option.value);
+    const interests = ["Hiking", "Family"];
+    //const interests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
+    //const interests = _.map(selectedInterests, (option) => option.value);
 
     const newActivity = { title, location, hours, cost, rating, picture, description, interests};
+    //const newActivity = { title, location, hours, cost, rating, picture, description, interests};
+    console.log(newActivity);
 
     // Clear out any old validation errors.
     instance.context.resetValidation();
@@ -71,11 +73,13 @@ Template.Add_Activity_Page.events({
     instance.context.validate(newActivity);
 
     if (instance.context.isValid()) {
-      const docID = Activities.findDoc()._id;
-      //const docID = Activities.findDoc(FlowRouter.getParam('username'))._id;
-      const id = Activities.define(docID, { $set: newActivity });
-      instance.messageFlags.set(displaySuccessMessage, id);
+      //const docID = Activities.findDoc()._id;
+     // const docID = Activities.findDoc(FlowRouter.getParam('username'))._id;
+      Activities.define(newActivity);
+      //const id = Activities.define(docID, { $set: newActivity });
+      //instance.messageFlags.set(displaySuccessMessage, id);
       instance.messageFlags.set(displayErrorMessages, false);
+      //FlowRouter.go('Dashboard_Page');
     } else {
       instance.messageFlags.set(displaySuccessMessage, false);
       instance.messageFlags.set(displayErrorMessages, true);
