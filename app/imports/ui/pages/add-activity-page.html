@@ -1,50 +1,42 @@
 <template name="Add_Activity_Page">
-  {{#If_Logged_In}}
-  <div style="padding-top: 20px" class="ui container">
-    <h2 class="ui center aligned icon header">
-      <i class="circular users icon"></i>
-      Activity name
-    </h2>
+  <!--Should verify that the logged in user can only edit their page.-->
+  <!--Add authentication check for edit profile page-->
+  {{#if Template.subscriptionsReady}}
 
-    <h3 class="ui center block header">
-      Activity name
-    </h3>
+    <div class="ui text container segment edit profile">
+      <div class="ui dividing header">
+        <h1>Add an Adventure!</h1>
+      </div>
+      <form class="ui equal width form activity-data-form {{ successClass }} {{ errorClass }}">
 
-    <h3 class="ui dividing header">
-      About this Activity
-    </h3>
-    <p>The potato belongs to the Solanaceae or nightshade family whose other members include tomatoes, eggplants,
-      peppers, and tomatillos. They are the swollen portion of the underground stem which is called a tuber and is
-      designed to provide food for the green leafy portion of the plant. If allowed to flower and fruit, the potato
-      plant will bear an inedible fruit resembling a tomato. </p>
-    <h3 class="ui dividing header">
-      Hours and Location
+        <div class="fields">
+          {{> Text_Form_Control label="Title" placeholder="Manoa Falls" value=newAdventure.title errorMessage=(fieldError "title")}}
+          {{> Text_Form_Control label="Location" placeholder="Manoa" required=true errorMessage=(fieldError "location")}}
+          {{> Text_Form_Control label="Hours" placeholder="8AM - 9PM" required=true errorMessage=(fieldError "hours")}}
 
-    </h3>
-    <p>Monday to Wednesday 9am-8pm
-      Thursday to Friday 9am-9pm
-      Saturday to Sunday 9am-8pm</p>
+        </div>
 
-    <h3 class="ui dividing header">
-      Key Features
-    </h3>
-    <p>The potato belongs to the Solanaceae or nightshade family whose other members include tomatoes, eggplants,
-      peppers, and tomatillos. They are the swollen portion of the underground stem which is called a tuber and is
-      designed to provide food for the green leafy portion of the plant. If allowed to flower and fruit, the potato
-      plant will bear an inedible fruit resembling a tomato. </p>
-    <h3 class="ui dividing header">
-      Cost
-    </h3>
-    <div class="ui tag labels">
-      <a class="ui label">
-        $10.00
-      </a>
+        <div class="field">
+          {{> Text_Form_Control label="Cost" placeholder="$2 Parking" required=true errorMessage=(fieldError "cost")}}
+          {{> Text_Form_Control label="Rating" placeholder="3 1/2 Stars" required=true errorMessage=(fieldError "rating")}}
+          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" required=true errorMessage=(fieldError "picture")}}
+        </div>
+
+        <div class="field">
+          {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+        </div>
+
+        {{> TextArea_Form_Control label="Description" required=true placeholder="Please write a description of the activity here." errorMessage=(fieldError "description")}}
+
+
+        <button class="ui primary button" type="submit">Save Changes</button>
+        {{#if displaySuccessMessage}}
+          <div class="ui success message">
+            <p>Activity Successfully Added!</p>
+          </div>
+        {{/if}}
+      </form>
     </div>
 
-
-  </div>
-  <div class="add activity bottom whitespace"></div>
-
-
-  {{/If_Logged_In}}
+  {{/if}}
 </template>
