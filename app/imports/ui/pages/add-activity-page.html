@@ -11,22 +11,22 @@
 
         <div class="fields">
           {{> Text_Form_Control label="Title" placeholder="Manoa Falls" value=newAdventure.title errorMessage=(fieldError "title")}}
-          {{> Text_Form_Control label="Location" placeholder="Manoa" value=newAdventure.location errorMessage=(fieldError "location")}}
-          {{> Text_Form_Control label="Hours" placeholder="8AM - 9PM" value=newAdventure.hours errorMessage=(fieldError "hours")}}
+          {{> Text_Form_Control label="Location" placeholder="Manoa" required=true errorMessage=(fieldError "location")}}
+          {{> Text_Form_Control label="Hours" placeholder="8AM - 9PM" required=true errorMessage=(fieldError "hours")}}
 
         </div>
 
         <div class="field">
-          {{> Text_Form_Control label="Cost" placeholder="$2 Parking" value=newAdventure.cost errorMessage=(fieldError "cost")}}
-          {{> Text_Form_Control label="Rating" placeholder="3 1/2 Stars" value=newAdventure.rating errorMessage=(fieldError "rating")}}
-          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
+          {{> Text_Form_Control label="Cost" placeholder="$2 Parking" required=true errorMessage=(fieldError "cost")}}
+          {{> Text_Form_Control label="Rating" placeholder="3 1/2 Stars" required=true errorMessage=(fieldError "rating")}}
+          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" required=true errorMessage=(fieldError "picture")}}
         </div>
 
-        <!-- <div class="field">
-          {> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
-        </div>-->
+        <div class="field">
+          {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+        </div>
 
-        {{> TextArea_Form_Control label="Description" value=newAdventure.description placeholder="Please write a description of the activity here." errorMessage=(fieldError "description")}}
+        {{> TextArea_Form_Control label="Description" required=true placeholder="Please write a description of the activity here." errorMessage=(fieldError "description")}}
 
 
         <button class="ui primary button" type="submit">Save Changes</button>

@@ -3,6 +3,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
+import { Users } from '/imports/api/users/UsersCollection';
 import { Activities } from '/imports/api/activity/ActivityCollection';
 import { Interests } from '/imports/api/interests/InterestsCollection';
 import '/imports/ui/components/form-controls';
@@ -11,7 +12,7 @@ const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Add_Activity_Page.onCreated(function onCreated() {
-  //this.subscribe(Activities.getPublicationName());
+  this.subscribe(Activities.getPublicationName());
   this.subscribe(Interests.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
@@ -34,17 +35,11 @@ Template.Add_Activity_Page.helpers({
     const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
     return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
   },
-  /*newAdventure() {
-    return Activities.define();
-  },
   interests() {
-    const activityProfile = Activities.findDoc();
-    const selectedInterests = activityProfile.interests;
-    return activityProfile && _.map(Interests.findAll(),
-    return _.map(Interests.findAll(), function makeInterestObject(interest) {
-          return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
-        });
-  },*/
+    const selectedInterests = Interests;
+    return  _.map(Interests.findAll(),function makeInterestObject(interest) {return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
+            });
+  },
 });
 
 Template.Add_Activity_Page.events({
@@ -57,9 +52,8 @@ Template.Add_Activity_Page.events({
     const rating = event.target.Rating.value; // schema requires username.
     const picture = event.target.Picture.value;
     const description = event.target.Description.value;
-    const interests = ["Hiking", "Family"];
-    //const interests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
-    //const interests = _.map(selectedInterests, (option) => option.value);
+    const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
+    const interests = _.map(selectedInterests, (option) => option.value);
 
     const newActivity = { title, location, hours, cost, rating, picture, description, interests};
     //const newActivity = { title, location, hours, cost, rating, picture, description, interests};
