@@ -12,18 +12,20 @@
         <div class="fields">
           {{> Text_Form_Control label="Title" placeholder="Manoa Falls" value=newAdventure.title errorMessage=(fieldError "title")}}
           {{> Text_Form_Control label="Location" placeholder="Manoa" required=true errorMessage=(fieldError "location")}}
-          {{> Text_Form_Control label="Hours" placeholder="8AM - 9PM" required=true errorMessage=(fieldError "hours")}}
 
         </div>
 
-        <div class="field">
+        <div class="fields">
           {{> Text_Form_Control label="Cost" placeholder="$2 Parking" required=true errorMessage=(fieldError "cost")}}
+          {{> Text_Form_Control label="Hours" placeholder="8AM - 9PM" required=true errorMessage=(fieldError "hours")}}
           {{> Text_Form_Control label="Rating" placeholder="3 1/2 Stars" required=true errorMessage=(fieldError "rating")}}
-          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" required=true errorMessage=(fieldError "picture")}}
         </div>
-
         <div class="field">
           {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+        </div>
+
+        <div class="field">
+          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" required=true errorMessage=(fieldError "picture")}}
         </div>
 
         {{> TextArea_Form_Control label="Description" required=true placeholder="Please write a description of the activity here." errorMessage=(fieldError "description")}}

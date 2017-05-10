@@ -67,13 +67,9 @@ Template.Add_Activity_Page.events({
     instance.context.validate(newActivity);
 
     if (instance.context.isValid()) {
-      //const docID = Activities.findDoc()._id;
-     // const docID = Activities.findDoc(FlowRouter.getParam('username'))._id;
       Activities.define(newActivity);
-      //const id = Activities.define(docID, { $set: newActivity });
-      //instance.messageFlags.set(displaySuccessMessage, id);
+
       instance.messageFlags.set(displayErrorMessages, false);
-      //FlowRouter.go('Dashboard_Page');
     } else {
       instance.messageFlags.set(displaySuccessMessage, false);
       instance.messageFlags.set(displayErrorMessages, true);
