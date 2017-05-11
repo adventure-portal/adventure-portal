@@ -7,25 +7,25 @@ Adventure Portal project page: https://adventure-portal.github.io/
 
 
 ## Landing Page
-![](../../doc/landing-1.PNG)
-![](../../doc/landing-2.PNG)
-![](../../doc/landing-3.PNG)
-![](../../doc/landing-4.PNG)
+![](doc/landing-1.PNG)
+![](doc/landing-2.PNG)
+![](doc/landing-3.PNG)
+![](doc/landing-4.PNG)
 
 ## Home Page
-![](../../doc/Dashboard1.png)
+![](doc/Dashboard1.png)
 
 ## Find Adventures Page
-![](../../doc/Filter-page.png)
+![](doc/Filter-page.png)
 
 ## My Profile Page
-![](../../doc/Edit-profile-page.png)
+![](doc/Edit-profile-page.png)
 
 ## Unauthorized Page
-![](../../doc/unauthorized.PNG)
+![](doc/unauthorized.PNG)
 
 ## 404 Page
-![](../../doc/404.PNG)
+![](doc/404.PNG)
 
 # Developers Guide
 
